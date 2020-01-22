@@ -1,0 +1,1 @@
+RESULTS in ./results/HPL-2_node_dgx1-8xv100-ompi-3.1.2-results-node1.0118.004202/HPL-2_node_dgx1-8xv100-ompi-3.1.2-results-node1.0118.004202-out.txt

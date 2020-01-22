@@ -1,0 +1,388 @@
+Currently Loaded Modulefiles:
+  1) slurm/16.05.0   2) cuda/9.2.88     3) cuda/9.1.85
+Wed May 30 18:00:38 2018       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 396.26                 Driver Version: 396.26                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:06:00.0 Off |                    0 |
+| N/A   39C    P0    45W / 300W |      0MiB / 16160MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-SXM2...  On   | 00000000:07:00.0 Off |                    0 |
+| N/A   38C    P0    43W / 300W |      0MiB / 16160MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla V100-SXM2...  On   | 00000000:0A:00.0 Off |                    0 |
+| N/A   39C    P0    45W / 300W |      0MiB / 16160MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla V100-SXM2...  On   | 00000000:0B:00.0 Off |                    0 |
+| N/A   34C    P0    43W / 300W |      0MiB / 16160MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   4  Tesla V100-SXM2...  On   | 00000000:85:00.0 Off |                    0 |
+| N/A   40C    P0    43W / 300W |      0MiB / 16160MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   5  Tesla V100-SXM2...  On   | 00000000:86:00.0 Off |                    0 |
+| N/A   39C    P0    43W / 300W |      0MiB / 16160MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   6  Tesla V100-SXM2...  On   | 00000000:89:00.0 Off |                    0 |
+| N/A   40C    P0    44W / 300W |      0MiB / 16160MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   7  Tesla V100-SXM2...  On   | 00000000:8A:00.0 Off |                    0 |
+| N/A   34C    P0    42W / 300W |      0MiB / 16160MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+mpirun (Open MPI) 3.1.0
+
+Report bugs to http://www.open-mpi.org/community/help/
+Results in folder ./results/HPL-dgx1_v100x8-results-dgx05.0530.180039
+Persistence mode is already Enabled for GPU 00000000:06:00.0.
+Persistence mode is already Enabled for GPU 00000000:07:00.0.
+Persistence mode is already Enabled for GPU 00000000:0A:00.0.
+Persistence mode is already Enabled for GPU 00000000:0B:00.0.
+Persistence mode is already Enabled for GPU 00000000:85:00.0.
+Persistence mode is already Enabled for GPU 00000000:86:00.0.
+Persistence mode is already Enabled for GPU 00000000:89:00.0.
+Persistence mode is already Enabled for GPU 00000000:8A:00.0.
+All done.
+Applications clocks set to "(MEM 877, SM 1380)" for GPU 00000000:06:00.0
+Applications clocks set to "(MEM 877, SM 1380)" for GPU 00000000:07:00.0
+Applications clocks set to "(MEM 877, SM 1380)" for GPU 00000000:0A:00.0
+Applications clocks set to "(MEM 877, SM 1380)" for GPU 00000000:0B:00.0
+Applications clocks set to "(MEM 877, SM 1380)" for GPU 00000000:85:00.0
+Applications clocks set to "(MEM 877, SM 1380)" for GPU 00000000:86:00.0
+Applications clocks set to "(MEM 877, SM 1380)" for GPU 00000000:89:00.0
+Applications clocks set to "(MEM 877, SM 1380)" for GPU 00000000:8A:00.0
+All done.
+host= rank= 0 lrank = 0 cores=4 bin=/home/award/HPL/hpl_cuda_9.0_9.1_9.2_opmi1.10_3.1_gcc485_volta_pascal_kepler_5_18_18/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 1 lrank = 1 cores=4 bin=/home/award/HPL/hpl_cuda_9.0_9.1_9.2_opmi1.10_3.1_gcc485_volta_pascal_kepler_5_18_18/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 2 lrank = 2 cores=4 bin=/home/award/HPL/hpl_cuda_9.0_9.1_9.2_opmi1.10_3.1_gcc485_volta_pascal_kepler_5_18_18/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 3 lrank = 3 cores=4 bin=/home/award/HPL/hpl_cuda_9.0_9.1_9.2_opmi1.10_3.1_gcc485_volta_pascal_kepler_5_18_18/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 4 lrank = 4 cores=4 bin=/home/award/HPL/hpl_cuda_9.0_9.1_9.2_opmi1.10_3.1_gcc485_volta_pascal_kepler_5_18_18/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 5 lrank = 5 cores=4 bin=/home/award/HPL/hpl_cuda_9.0_9.1_9.2_opmi1.10_3.1_gcc485_volta_pascal_kepler_5_18_18/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 6 lrank = 6 cores=4 bin=/home/award/HPL/hpl_cuda_9.0_9.1_9.2_opmi1.10_3.1_gcc485_volta_pascal_kepler_5_18_18/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 7 lrank = 7 cores=4 bin=/home/award/HPL/hpl_cuda_9.0_9.1_9.2_opmi1.10_3.1_gcc485_volta_pascal_kepler_5_18_18/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+--------------------------------------------------------------------------
+WARNING: There are more than one active ports on host 'dgx05', but the
+default subnet GID prefix was detected on more than one of these
+ports.  If these ports are connected to different physical IB
+networks, this configuration will fail in Open MPI.  This version of
+Open MPI requires that every physically separate IB subnet that is
+used between connected MPI processes must have different subnet ID
+values.
+
+Please see this FAQ entry for more details:
+
+  http://www.open-mpi.org/faq/?category=openfabrics#ofa-default-subnet-gid
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_default_gid_prefix to 0.
+--------------------------------------------------------------------------
+================================================================================
+HPLinpack 2.1  --  High-Performance Linpack benchmark  --   October 26, 2012
+Written by A. Petitet and R. Clint Whaley,  Innovative Computing Laboratory, UTK
+Modified by Piotr Luszczek, Innovative Computing Laboratory, UTK
+Modified by Julien Langou, University of Colorado Denver
+================================================================================
+
+An explanation of the input/output parameters follows:
+T/V    : Wall time / encoded variant.
+N      : The order of the coefficient matrix A.
+NB     : The partitioning blocking factor.
+P      : The number of process rows.
+Q      : The number of process columns.
+Time   : Time in seconds to solve the linear system.
+Gflops : Rate of execution for solving the linear system.
+
+The following parameter values will be used:
+
+N      :  125952 
+NB     :     256 
+PMAP   : Row-major process mapping
+P      :       4 
+Q      :       2 
+PFACT  :    Left 
+NBMIN  :       2 
+NDIV   :       2 
+RFACT  :    Left 
+BCAST  :   2ring 
+DEPTH  :       0 
+SWAP   : Spread-roll (long)
+L1     : no-transposed form
+U      : transposed form
+EQUIL  : yes
+ALIGN  : 8 double precision words
+
+--------------------------------------------------------------------------------
+
+- The matrix A is randomly generated for each test.
+- The following scaled residual check will be computed:
+      ||Ax-b||_oo / ( eps * ( || x ||_oo * || A ||_oo + || b ||_oo ) * N )
+- The relative machine precision (eps) is taken to be               1.110223e-16
+- Computational tests pass if scaled residuals are less than                16.0
+
+trsm_cutoff from environment variable 1000000 
+gpu_dgemm_split from environment variable 1.000 
+monitor_gpu from environment variable 1 
+gpu_temp_warning from environment variable 80 
+gpu_clock_warning from environment variable 1392 
+gpu_power_warning from environment variable 280 
+gpu_pcie_gen_warning from environment variable 3 
+gpu_pcie_width_warning from environment variable 16 
+
+	******** TESTING SYSTEM PARAMETERS ********
+	PARAM 	[UNITS] 	MIN 	MAX 	AVG 
+	----- 	------- 	--- 	--- 	--- 
+[dgx05:45428] 7 more processes have sent help message help-mpi-btl-openib.txt / default subnet prefix
+[dgx05:45428] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+CPU : 
+	CPU_BW	[GB/s ] 	9.6 	9.6 	9.6 
+	CPU_FP	[GFLPS] 
+	     	NB =   32 	  25 	  25 	  25 
+	     	NB =   64 	  50 	  50 	  50 
+	     	NB =  128 	  83 	  84 	  83 
+	     	NB =  256 	 104 	 106 	 105 
+	     	NB =  512 	 119 	 121 	 120 
+PCIE (NVLINK on IBM) : 
+	H2D_BW	[GB/s ] 	4.7 	5.0 	4.8 
+	D2H_BW	[GB/s ] 	5.4 	5.4 	5.4 
+	BID_BW	[GB/s ] 	7.3 	7.3 	7.3 
+CPU_BW concurrent with BID_BW : 
+	CPU_BW	[GB/s ] 	7.2 	7.2 	7.2 
+	BID_BW	[GB/s ] 	3.8 	3.9 	3.9 
+GPU : 
+	GPU_BW	[GB/s ] 	775 	779 	778 
+	GPU_FP	[GFLPS] 
+	     	NB =  128 	5844 	5859 	5851 
+	     	NB =  256 	6465 	6473 	6470 
+	     	NB =  384 	6910 	6925 	6917 
+	     	NB =  512 	6588 	6793 	6722 
+	     	NB =  640 	6803 	6990 	6924 
+	     	NB =  768 	6658 	6875 	6809 
+	     	NB =  896 	6852 	7000 	6952 
+	     	NB = 1024 	6743 	6937 	6874 
+NET : 
+	PROC COL NET_BW	[MB/s ] 
+		     8 B  	  24 	  24 	  24 
+		    64 B  	 163 	 165 	 164 
+		   512 B  	 567 	 590 	 579 
+		     4 KB 	2520 	2646 	2582 
+		    32 KB 	7686 	7833 	7759 
+		   256 KB 	9274 	9407 	9341 
+		  2048 KB 	3708 	3765 	3737 
+		 16384 KB 	3821 	3881 	3851 
+	NET_LAT	[ us  ] 	0.8 	0.9 	0.9 
+
+	PROC ROW NET_BW	[MB/s ] 
+		     8 B  	  36 	  37 	  36 
+		    64 B  	 249 	 261 	 254 
+		   512 B  	 981 	1038 	1010 
+		     4 KB 	4187 	4555 	4389 
+		    32 KB 	13727 	14495 	14134 
+		   256 KB 	18421 	19704 	19006 
+		  2048 KB 	7292 	7353 	7316 
+		 16384 KB 	7244 	7492 	7357 
+	NET_LAT	[ us  ] 	0.8 	1.0 	0.9 
+
+displaying Prog:%complete, N:columns, Time:seconds
+iGF:instantaneous GF, GF:avg GF, GF_per: process GF
+
+
+Per-Process Host Memory Estimate: 16.06 GB (MAX) 16.06 GB (MIN)
+
+PCOL: 0 GPU_COLS: 62977 CPU_COLS: 0 
+PCOL: 1 GPU_COLS: 62977 CPU_COLS: 0 
+2018-05-30 18:01:25.323
+[0;31m Prog= 1.82%	N_left= 125184	Time= 0.76	Time_left= 40.89	iGF= 31984.46	GF= 31984.46	iGF_per= 3998.06 	GF_per= 3998.06 [0m
+[0;31m Prog= 3.02%	N_left= 124672	Time= 1.08	Time_left= 34.71	iGF= 49506.68	GF= 37221.84	iGF_per= 6188.34 	GF_per= 4652.73 [0m
+[0;31m Prog= 4.80%	N_left= 123904	Time= 1.57	Time_left= 31.07	iGF= 48788.85	GF= 40813.24	iGF_per= 6098.61 	GF_per= 5101.65 [0m
+[0;31m Prog= 5.97%	N_left= 123392	Time= 1.89	Time_left= 29.69	iGF= 48866.67	GF= 42180.76	iGF_per= 6108.33 	GF_per= 5272.59 [0m
+[0;31m Prog= 7.72%	N_left= 122624	Time= 2.36	Time_left= 28.25	iGF= 48763.15	GF= 43508.23	iGF_per= 6095.39 	GF_per= 5438.53 [0m
+[0;31m Prog= 8.87%	N_left= 122112	Time= 2.68	Time_left= 27.52	iGF= 48552.07	GF= 44102.79	iGF_per= 6069.01 	GF_per= 5512.85 [0m
+[0;31m Prog= 10.58%	N_left= 121344	Time= 3.15	Time_left= 26.59	iGF= 48771.74	GF= 44795.40	iGF_per= 6096.47 	GF_per= 5599.43 [0m
+[0;31m Prog= 11.71%	N_left= 120832	Time= 3.46	Time_left= 26.06	iGF= 48518.13	GF= 45128.81	iGF_per= 6064.77 	GF_per= 5641.10 [0m
+[0;31m Prog= 13.38%	N_left= 120064	Time= 3.93	Time_left= 25.44	iGF= 47054.72	GF= 45360.95	iGF_per= 5881.84 	GF_per= 5670.12 [0m
+[0;31m Prog= 14.48%	N_left= 119552	Time= 4.23	Time_left= 24.99	iGF= 48602.91	GF= 45592.67	iGF_per= 6075.36 	GF_per= 5699.08 [0m
+[0;31m Prog= 16.12%	N_left= 118784	Time= 4.67	Time_left= 24.29	iGF= 49908.66	GF= 45996.74	iGF_per= 6238.58 	GF_per= 5749.59 [0m
+[0;31m Prog= 17.20%	N_left= 118272	Time= 4.96	Time_left= 23.86	iGF= 49811.35	GF= 46218.98	iGF_per= 6226.42 	GF_per= 5777.37 [0m
+!!!! WARNING: Rank: 0 : dgx05 : GPU 0000:06:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 52 C 	[0;31mPower: 303 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 2 : dgx05 : GPU 0000:0a:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 52 C 	[0;31mPower: 286 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 1 : dgx05 : GPU 0000:07:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 52 C 	[0;31mPower: 286 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 7 : dgx05 : GPU 0000:8a:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 49 C 	[0;31mPower: 282 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 5 : dgx05 : GPU 0000:86:00.0 	[0;31mClock: 1372 MHz [0m	Temp: 53 C 	[0;31mPower: 302 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 3 : dgx05 : GPU 0000:0b:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 51 C 	[0;31mPower: 295 W [0m	PCIe  gen 3 	 x16 
+[0;31m Prog= 18.27%	N_left= 117760	Time= 5.27	Time_left= 23.57	iGF= 45804.31	GF= 46194.47	iGF_per= 5725.54 	GF_per= 5774.31 [0m
+!!!! WARNING: Rank: 6 : dgx05 : GPU 0000:89:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 55 C 	[0;31mPower: 292 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 4 : dgx05 : GPU 0000:85:00.0 	[0;31mClock: 1372 MHz [0m	Temp: 52 C 	[0;31mPower: 297 W [0m	PCIe  gen 3 	 x16 
+[0;31m Prog= 19.86%	N_left= 116992	Time= 5.72	Time_left= 23.08	iGF= 46955.01	GF= 46254.41	iGF_per= 5869.38 	GF_per= 5781.80 [0m
+[0;31m Prog= 20.91%	N_left= 116480	Time= 6.01	Time_left= 22.73	iGF= 48094.60	GF= 46343.25	iGF_per= 6011.83 	GF_per= 5792.91 [0m
+[0;31m Prog= 22.46%	N_left= 115712	Time= 6.42	Time_left= 22.16	iGF= 50453.77	GF= 46605.99	iGF_per= 6306.72 	GF_per= 5825.75 [0m
+[0;31m Prog= 23.49%	N_left= 115200	Time= 6.71	Time_left= 21.85	iGF= 47604.49	GF= 46648.68	iGF_per= 5950.56 	GF_per= 5831.09 [0m
+[0;31m Prog= 25.01%	N_left= 114432	Time= 7.15	Time_left= 21.45	iGF= 45492.90	GF= 46576.75	iGF_per= 5686.61 	GF_per= 5822.09 [0m
+[0;31m Prog= 26.01%	N_left= 113920	Time= 7.42	Time_left= 21.12	iGF= 48956.49	GF= 46664.15	iGF_per= 6119.56 	GF_per= 5833.02 [0m
+[0;31m Prog= 27.49%	N_left= 113152	Time= 7.81	Time_left= 20.61	iGF= 50744.11	GF= 46867.87	iGF_per= 6343.01 	GF_per= 5858.48 [0m
+[0;31m Prog= 28.47%	N_left= 112640	Time= 8.09	Time_left= 20.32	iGF= 47633.03	GF= 46893.79	iGF_per= 5954.13 	GF_per= 5861.72 [0m
+[0;31m Prog= 29.93%	N_left= 111872	Time= 8.51	Time_left= 19.92	iGF= 46219.73	GF= 46860.61	iGF_per= 5777.47 	GF_per= 5857.58 [0m
+[0;31m Prog= 30.88%	N_left= 111360	Time= 8.77	Time_left= 19.63	iGF= 48279.23	GF= 46903.35	iGF_per= 6034.90 	GF_per= 5862.92 [0m
+[0;31m Prog= 32.31%	N_left= 110592	Time= 9.16	Time_left= 19.19	iGF= 48671.74	GF= 46978.38	iGF_per= 6083.97 	GF_per= 5872.30 [0m
+[0;31m Prog= 33.24%	N_left= 110080	Time= 9.41	Time_left= 18.90	iGF= 49402.02	GF= 47043.36	iGF_per= 6175.25 	GF_per= 5880.42 [0m
+[0;31m Prog= 34.17%	N_left= 109568	Time= 9.68	Time_left= 18.66	iGF= 45500.19	GF= 47000.10	iGF_per= 5687.52 	GF_per= 5875.01 [0m
+[0;31m Prog= 35.54%	N_left= 108800	Time= 10.06	Time_left= 18.24	iGF= 48764.16	GF= 47065.95	iGF_per= 6095.52 	GF_per= 5883.24 [0m
+!!!! WARNING: Rank: 2 : dgx05 : GPU 0000:0a:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 55 C 	[0;31mPower: 283 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 0 : dgx05 : GPU 0000:06:00.0 	[0;31mClock: 1372 MHz [0m	Temp: 55 C 	[0;31mPower: 295 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 7 : dgx05 : GPU 0000:8a:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 51 C 	[0;31mPower: 284 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 3 : dgx05 : GPU 0000:0b:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 53 C 	[0;31mPower: 290 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 1 : dgx05 : GPU 0000:07:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 54 C 	[0;31mPower: 285 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 5 : dgx05 : GPU 0000:86:00.0 	[0;31mClock: 1372 MHz [0m	Temp: 56 C 	[0;31mPower: 296 W [0m	PCIe  gen 3 	 x16 
+[0;31m Prog= 36.45%	N_left= 108288	Time= 10.33	Time_left= 18.01	iGF= 45013.31	GF= 47012.68	iGF_per= 5626.66 	GF_per= 5876.58 [0m
+!!!! WARNING: Rank: 6 : dgx05 : GPU 0000:89:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 58 C 	[0;31mPower: 299 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 4 : dgx05 : GPU 0000:85:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 55 C 	[0;31mPower: 300 W [0m	PCIe  gen 3 	 x16 
+[0;31m Prog= 37.79%	N_left= 107520	Time= 10.68	Time_left= 17.58	iGF= 50377.63	GF= 47124.50	iGF_per= 6297.20 	GF_per= 5890.56 [0m
+[0;31m Prog= 38.68%	N_left= 107008	Time= 10.93	Time_left= 17.33	iGF= 47781.21	GF= 47139.32	iGF_per= 5972.65 	GF_per= 5892.42 [0m
+[0;31m Prog= 39.99%	N_left= 106240	Time= 11.29	Time_left= 16.95	iGF= 48050.73	GF= 47168.65	iGF_per= 6006.34 	GF_per= 5896.08 [0m
+[0;31m Prog= 40.85%	N_left= 105728	Time= 11.53	Time_left= 16.70	iGF= 48328.14	GF= 47192.59	iGF_per= 6041.02 	GF_per= 5899.07 [0m
+[0;31m Prog= 42.13%	N_left= 104960	Time= 11.89	Time_left= 16.33	iGF= 47441.33	GF= 47200.10	iGF_per= 5930.17 	GF_per= 5900.01 [0m
+[0;31m Prog= 42.97%	N_left= 104448	Time= 12.11	Time_left= 16.07	iGF= 50288.04	GF= 47257.01	iGF_per= 6286.00 	GF_per= 5907.13 [0m
+[0;31m Prog= 44.22%	N_left= 103680	Time= 12.47	Time_left= 15.73	iGF= 46479.55	GF= 47234.70	iGF_per= 5809.94 	GF_per= 5904.34 [0m
+[0;31m Prog= 45.04%	N_left= 103168	Time= 12.70	Time_left= 15.49	iGF= 48454.48	GF= 47256.42	iGF_per= 6056.81 	GF_per= 5907.05 [0m
+[0;31m Prog= 46.26%	N_left= 102400	Time= 13.04	Time_left= 15.14	iGF= 47771.92	GF= 47269.85	iGF_per= 5971.49 	GF_per= 5908.73 [0m
+[0;31m Prog= 47.06%	N_left= 101888	Time= 13.26	Time_left= 14.92	iGF= 47687.05	GF= 47276.90	iGF_per= 5960.88 	GF_per= 5909.61 [0m
+[0;31m Prog= 47.86%	N_left= 101376	Time= 13.48	Time_left= 14.69	iGF= 47596.47	GF= 47282.17	iGF_per= 5949.56 	GF_per= 5910.27 [0m
+[0;31m Prog= 49.03%	N_left= 100608	Time= 13.81	Time_left= 14.36	iGF= 47324.39	GF= 47283.18	iGF_per= 5915.55 	GF_per= 5910.40 [0m
+[0;31m Prog= 49.81%	N_left= 100096	Time= 14.03	Time_left= 14.14	iGF= 48302.11	GF= 47298.69	iGF_per= 6037.76 	GF_per= 5912.34 [0m
+[0;31m Prog= 50.95%	N_left= 99328	Time= 14.35	Time_left= 13.81	iGF= 47726.15	GF= 47308.22	iGF_per= 5965.77 	GF_per= 5913.53 [0m
+[0;31m Prog= 51.71%	N_left= 98816	Time= 14.56	Time_left= 13.60	iGF= 47594.47	GF= 47312.37	iGF_per= 5949.31 	GF_per= 5914.05 [0m
+[0;31m Prog= 52.83%	N_left= 98048	Time= 14.87	Time_left= 13.28	iGF= 47524.18	GF= 47316.83	iGF_per= 5940.52 	GF_per= 5914.60 [0m
+[0;31m Prog= 53.56%	N_left= 97536	Time= 15.08	Time_left= 13.08	iGF= 46468.65	GF= 47304.98	iGF_per= 5808.58 	GF_per= 5913.12 [0m
+!!!! WARNING: Rank: 2 : dgx05 : GPU 0000:0a:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 57 C 	[0;31mPower: 282 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 0 : dgx05 : GPU 0000:06:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 57 C 	[0;31mPower: 302 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 5 : dgx05 : GPU 0000:86:00.0 	[0;31mClock: 1372 MHz [0m	Temp: 59 C 	[0;31mPower: 295 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 7 : dgx05 : GPU 0000:8a:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 53 C 	[0;31mPower: 280 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 1 : dgx05 : GPU 0000:07:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 56 C 	[0;31mPower: 283 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 3 : dgx05 : GPU 0000:0b:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 55 C 	[0;31mPower: 291 W [0m	PCIe  gen 3 	 x16 
+[0;31m Prog= 54.65%	N_left= 96768	Time= 15.39	Time_left= 12.77	iGF= 47757.20	GF= 47313.90	iGF_per= 5969.65 	GF_per= 5914.24 [0m
+!!!! WARNING: Rank: 6 : dgx05 : GPU 0000:89:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 61 C 	[0;31mPower: 299 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 4 : dgx05 : GPU 0000:85:00.0 	[0;31mClock: 1372 MHz [0m	Temp: 57 C 	[0;31mPower: 297 W [0m	PCIe  gen 3 	 x16 
+[0;31m Prog= 55.37%	N_left= 96256	Time= 15.60	Time_left= 12.57	iGF= 45016.09	GF= 47282.69	iGF_per= 5627.01 	GF_per= 5910.34 [0m
+[0;31m Prog= 56.43%	N_left= 95488	Time= 15.91	Time_left= 12.29	iGF= 44938.18	GF= 47236.40	iGF_per= 5617.27 	GF_per= 5904.55 [0m
+[0;31m Prog= 57.12%	N_left= 94976	Time= 16.12	Time_left= 12.10	iGF= 44577.86	GF= 47202.04	iGF_per= 5572.23 	GF_per= 5900.26 [0m
+[0;31m Prog= 58.15%	N_left= 94208	Time= 16.42	Time_left= 11.82	iGF= 45800.13	GF= 47176.42	iGF_per= 5725.02 	GF_per= 5897.05 [0m
+[0;31m Prog= 58.83%	N_left= 93696	Time= 16.63	Time_left= 11.63	iGF= 43838.30	GF= 47135.03	iGF_per= 5479.79 	GF_per= 5891.88 [0m
+[0;31m Prog= 59.50%	N_left= 93184	Time= 16.84	Time_left= 11.46	iGF= 41913.63	GF= 47068.89	iGF_per= 5239.20 	GF_per= 5883.61 [0m
+[0;31m Prog= 60.50%	N_left= 92416	Time= 17.14	Time_left= 11.19	iGF= 43758.11	GF= 47010.50	iGF_per= 5469.76 	GF_per= 5876.31 [0m
+[0;31m Prog= 61.15%	N_left= 91904	Time= 17.34	Time_left= 11.02	iGF= 44315.65	GF= 46980.00	iGF_per= 5539.46 	GF_per= 5872.50 [0m
+[0;31m Prog= 62.12%	N_left= 91136	Time= 17.65	Time_left= 10.76	iGF= 41588.18	GF= 46885.48	iGF_per= 5198.52 	GF_per= 5860.69 [0m
+[0;31m Prog= 62.75%	N_left= 90624	Time= 17.85	Time_left= 10.59	iGF= 42816.99	GF= 46840.45	iGF_per= 5352.12 	GF_per= 5855.06 [0m
+[0;31m Prog= 63.69%	N_left= 89856	Time= 18.15	Time_left= 10.35	iGF= 41464.00	GF= 46751.08	iGF_per= 5183.00 	GF_per= 5843.88 [0m
+[0;31m Prog= 64.31%	N_left= 89344	Time= 18.35	Time_left= 10.18	iGF= 41505.28	GF= 46694.44	iGF_per= 5188.16 	GF_per= 5836.80 [0m
+[0;31m Prog= 65.22%	N_left= 88576	Time= 18.64	Time_left= 9.94	iGF= 41339.85	GF= 46609.96	iGF_per= 5167.48 	GF_per= 5826.25 [0m
+[0;31m Prog= 65.82%	N_left= 88064	Time= 18.83	Time_left= 9.78	iGF= 42914.48	GF= 46573.43	iGF_per= 5364.31 	GF_per= 5821.68 [0m
+[0;31m Prog= 66.71%	N_left= 87296	Time= 19.11	Time_left= 9.54	iGF= 41941.28	GF= 46505.17	iGF_per= 5242.66 	GF_per= 5813.15 [0m
+[0;31m Prog= 67.29%	N_left= 86784	Time= 19.30	Time_left= 9.38	iGF= 40838.50	GF= 46449.38	iGF_per= 5104.81 	GF_per= 5806.17 [0m
+[0;31m Prog= 67.86%	N_left= 86272	Time= 19.49	Time_left= 9.23	iGF= 39882.26	GF= 46384.61	iGF_per= 4985.28 	GF_per= 5798.08 [0m
+[0;31m Prog= 68.71%	N_left= 85504	Time= 19.76	Time_left= 9.00	iGF= 41894.45	GF= 46323.15	iGF_per= 5236.81 	GF_per= 5790.39 [0m
+[0;31m Prog= 69.27%	N_left= 84992	Time= 19.95	Time_left= 8.85	iGF= 39137.84	GF= 46254.66	iGF_per= 4892.23 	GF_per= 5781.83 [0m
+!!!! WARNING: Rank: 0 : dgx05 : GPU 0000:06:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 57 C 	[0;31mPower: 301 W [0m	PCIe  gen 3 	 x16 
+[0;31m Prog= 70.10%	N_left= 84224	Time= 20.23	Time_left= 8.63	iGF= 39320.29	GF= 46158.81	iGF_per= 4915.04 	GF_per= 5769.85 [0m
+!!!! WARNING: Rank: 2 : dgx05 : GPU 0000:0a:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 57 C 	[0;31mPower: 281 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 3 : dgx05 : GPU 0000:0b:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 55 C 	[0;31mPower: 292 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 7 : dgx05 : GPU 0000:8a:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 53 C 	[0;31mPower: 280 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 5 : dgx05 : GPU 0000:86:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 59 C 	[0;31mPower: 298 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 1 : dgx05 : GPU 0000:07:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 57 C 	[0;31mPower: 282 W [0m	PCIe  gen 3 	 x16 
+[0;31m Prog= 70.64%	N_left= 83712	Time= 20.44	Time_left= 8.50	iGF= 33933.25	GF= 46031.56	iGF_per= 4241.66 	GF_per= 5753.94 [0m
+!!!! WARNING: Rank: 6 : dgx05 : GPU 0000:89:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 60 C 	[0;31mPower: 296 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 4 : dgx05 : GPU 0000:85:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 56 C 	[0;31mPower: 296 W [0m	PCIe  gen 3 	 x16 
+[0;31m Prog= 71.44%	N_left= 82944	Time= 20.72	Time_left= 8.28	iGF= 38152.31	GF= 45925.26	iGF_per= 4769.04 	GF_per= 5740.66 [0m
+[0;31m Prog= 71.97%	N_left= 82432	Time= 20.90	Time_left= 8.14	iGF= 38188.24	GF= 45857.41	iGF_per= 4773.53 	GF_per= 5732.18 [0m
+[0;31m Prog= 72.74%	N_left= 81664	Time= 21.18	Time_left= 7.94	iGF= 37492.97	GF= 45748.49	iGF_per= 4686.62 	GF_per= 5718.56 [0m
+[0;31m Prog= 73.25%	N_left= 81152	Time= 21.37	Time_left= 7.80	iGF= 36553.32	GF= 45668.60	iGF_per= 4569.16 	GF_per= 5708.57 [0m
+[0;31m Prog= 74.00%	N_left= 80384	Time= 21.63	Time_left= 7.60	iGF= 37582.53	GF= 45568.94	iGF_per= 4697.82 	GF_per= 5696.12 [0m
+[0;31m Prog= 74.50%	N_left= 79872	Time= 21.81	Time_left= 7.46	iGF= 37659.10	GF= 45505.61	iGF_per= 4707.39 	GF_per= 5688.20 [0m
+[0;31m Prog= 75.23%	N_left= 79104	Time= 22.07	Time_left= 7.27	iGF= 36551.10	GF= 45397.90	iGF_per= 4568.89 	GF_per= 5674.74 [0m
+[0;31m Prog= 75.70%	N_left= 78592	Time= 22.26	Time_left= 7.14	iGF= 34913.16	GF= 45311.99	iGF_per= 4364.15 	GF_per= 5664.00 [0m
+[0;31m Prog= 76.18%	N_left= 78080	Time= 22.43	Time_left= 7.01	iGF= 36305.91	GF= 45242.49	iGF_per= 4538.24 	GF_per= 5655.31 [0m
+[0;31m Prog= 76.87%	N_left= 77312	Time= 22.68	Time_left= 6.82	iGF= 37350.04	GF= 45156.09	iGF_per= 4668.76 	GF_per= 5644.51 [0m
+[0;31m Prog= 77.33%	N_left= 76800	Time= 22.85	Time_left= 6.70	iGF= 36047.51	GF= 45088.84	iGF_per= 4505.94 	GF_per= 5636.11 [0m
+[0;31m Prog= 78.00%	N_left= 76032	Time= 23.10	Time_left= 6.51	iGF= 35735.64	GF= 44987.20	iGF_per= 4466.95 	GF_per= 5623.40 [0m
+[0;31m Prog= 78.44%	N_left= 75520	Time= 23.27	Time_left= 6.39	iGF= 33941.95	GF= 44904.97	iGF_per= 4242.74 	GF_per= 5613.12 [0m
+[0;31m Prog= 79.09%	N_left= 74752	Time= 23.51	Time_left= 6.21	iGF= 36601.78	GF= 44821.29	iGF_per= 4575.22 	GF_per= 5602.66 [0m
+[0;31m Prog= 79.52%	N_left= 74240	Time= 23.67	Time_left= 6.10	iGF= 34408.72	GF= 44748.64	iGF_per= 4301.09 	GF_per= 5593.58 [0m
+[0;31m Prog= 80.15%	N_left= 73472	Time= 23.92	Time_left= 5.92	iGF= 33252.05	GF= 44627.55	iGF_per= 4156.51 	GF_per= 5578.44 [0m
+[0;31m Prog= 80.56%	N_left= 72960	Time= 24.08	Time_left= 5.81	iGF= 34538.26	GF= 44560.97	iGF_per= 4317.28 	GF_per= 5570.12 [0m
+[0;31m Prog= 81.17%	N_left= 72192	Time= 24.32	Time_left= 5.64	iGF= 34569.65	GF= 44464.81	iGF_per= 4321.21 	GF_per= 5558.10 [0m
+[0;31m Prog= 81.57%	N_left= 71680	Time= 24.48	Time_left= 5.53	iGF= 31857.15	GF= 44379.15	iGF_per= 3982.14 	GF_per= 5547.39 [0m
+[0;31m Prog= 82.15%	N_left= 70912	Time= 24.72	Time_left= 5.37	iGF= 32582.24	GF= 44264.80	iGF_per= 4072.78 	GF_per= 5533.10 [0m
+[0;31m Prog= 82.54%	N_left= 70400	Time= 24.88	Time_left= 5.26	iGF= 33106.95	GF= 44195.55	iGF_per= 4138.37 	GF_per= 5524.44 [0m
+[0;31m Prog= 82.92%	N_left= 69888	Time= 25.03	Time_left= 5.16	iGF= 32719.25	GF= 44124.95	iGF_per= 4089.91 	GF_per= 5515.62 [0m
+!!!! WARNING: Rank: 2 : dgx05 : GPU 0000:0a:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 57 C 	Power: 276 W 	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 0 : dgx05 : GPU 0000:06:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 56 C 	[0;31mPower: 289 W [0m	PCIe  gen 3 	 x16 
+[0;31m Prog= 83.47%	N_left= 69120	Time= 25.27	Time_left= 5.00	iGF= 31166.63	GF= 44002.85	iGF_per= 3895.83 	GF_per= 5500.36 [0m
+!!!! WARNING: Rank: 1 : dgx05 : GPU 0000:07:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 56 C 	Power: 277 W 	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 3 : dgx05 : GPU 0000:0b:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 54 C 	Power: 279 W 	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 5 : dgx05 : GPU 0000:86:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 58 C 	Power: 270 W 	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 7 : dgx05 : GPU 0000:8a:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 52 C 	Power: 199 W 	PCIe  gen 3 	 x16 
+[0;31m Prog= 83.84%	N_left= 68608	Time= 25.41	Time_left= 4.90	iGF= 34053.38	GF= 43947.02	iGF_per= 4256.67 	GF_per= 5493.38 [0m
+!!!! WARNING: Rank: 6 : dgx05 : GPU 0000:89:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 61 C 	[0;31mPower: 287 W [0m	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 4 : dgx05 : GPU 0000:85:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 56 C 	Power: 277 W 	PCIe  gen 3 	 x16 
+[0;31m Prog= 84.37%	N_left= 67840	Time= 25.66	Time_left= 4.75	iGF= 28952.33	GF= 43802.71	iGF_per= 3619.04 	GF_per= 5475.34 [0m
+[0;31m Prog= 84.73%	N_left= 67328	Time= 25.81	Time_left= 4.65	iGF= 31577.85	GF= 43732.55	iGF_per= 3947.23 	GF_per= 5466.57 [0m
+[0;31m Prog= 85.24%	N_left= 66560	Time= 26.03	Time_left= 4.51	iGF= 30851.08	GF= 43622.13	iGF_per= 3856.39 	GF_per= 5452.77 [0m
+[0;31m Prog= 85.58%	N_left= 66048	Time= 26.18	Time_left= 4.41	iGF= 30465.68	GF= 43547.87	iGF_per= 3808.21 	GF_per= 5443.48 [0m
+[0;31m Prog= 86.08%	N_left= 65280	Time= 26.40	Time_left= 4.27	iGF= 29366.55	GF= 43426.73	iGF_per= 3670.82 	GF_per= 5428.34 [0m
+[0;31m Prog= 86.40%	N_left= 64768	Time= 26.55	Time_left= 4.18	iGF= 28785.78	GF= 43343.80	iGF_per= 3598.22 	GF_per= 5417.98 [0m
+[0;31m Prog= 86.88%	N_left= 64000	Time= 26.77	Time_left= 4.04	iGF= 29156.91	GF= 43228.08	iGF_per= 3644.61 	GF_per= 5403.51 [0m
+[0;31m Prog= 87.19%	N_left= 63488	Time= 26.91	Time_left= 3.95	iGF= 30371.31	GF= 43162.62	iGF_per= 3796.41 	GF_per= 5395.33 [0m
+[0;31m Prog= 88.68%	N_left= 60928	Time= 27.60	Time_left= 3.52	iGF= 28571.46	GF= 42795.99	iGF_per= 3571.43 	GF_per= 5349.50 [0m
+[0;31m Prog= 90.05%	N_left= 58368	Time= 28.28	Time_left= 3.13	iGF= 27038.22	GF= 42420.48	iGF_per= 3379.78 	GF_per= 5302.56 [0m
+[0;31m Prog= 91.30%	N_left= 55808	Time= 28.93	Time_left= 2.76	iGF= 25717.51	GF= 42045.75	iGF_per= 3214.69 	GF_per= 5255.72 [0m
+[0;31m Prog= 92.33%	N_left= 53504	Time= 29.49	Time_left= 2.45	iGF= 24531.81	GF= 41712.41	iGF_per= 3066.48 	GF_per= 5214.05 [0m
+[0;31m Prog= 93.38%	N_left= 50944	Time= 30.08	Time_left= 2.13	iGF= 23578.85	GF= 41355.30	iGF_per= 2947.36 	GF_per= 5169.41 [0m
+!!!! WARNING: Rank: 0 : dgx05 : GPU 0000:06:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 54 C 	Power: 242 W 	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 2 : dgx05 : GPU 0000:0a:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 55 C 	Power: 206 W 	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 1 : dgx05 : GPU 0000:07:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 54 C 	Power: 200 W 	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 3 : dgx05 : GPU 0000:0b:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 52 C 	Power: 193 W 	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 7 : dgx05 : GPU 0000:8a:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 50 C 	Power: 174 W 	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 5 : dgx05 : GPU 0000:86:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 57 C 	Power: 178 W 	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 6 : dgx05 : GPU 0000:89:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 58 C 	Power: 238 W 	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 4 : dgx05 : GPU 0000:85:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 54 C 	Power: 214 W 	PCIe  gen 3 	 x16 
+[0;31m Prog= 94.33%	N_left= 48384	Time= 30.68	Time_left= 1.84	iGF= 20853.09	GF= 40950.58	iGF_per= 2606.64 	GF_per= 5118.82 [0m
+[0;31m Prog= 95.18%	N_left= 45824	Time= 31.25	Time_left= 1.58	iGF= 19964.91	GF= 40568.42	iGF_per= 2495.61 	GF_per= 5071.05 [0m
+[0;31m Prog= 95.95%	N_left= 43264	Time= 31.80	Time_left= 1.34	iGF= 18653.88	GF= 40192.99	iGF_per= 2331.73 	GF_per= 5024.12 [0m
+[0;31m Prog= 96.62%	N_left= 40704	Time= 32.32	Time_left= 1.13	iGF= 17171.90	GF= 39818.57	iGF_per= 2146.49 	GF_per= 4977.32 [0m
+[0;31m Prog= 97.17%	N_left= 38400	Time= 32.77	Time_left= 0.96	iGF= 16093.98	GF= 39494.23	iGF_per= 2011.75 	GF_per= 4936.78 [0m
+[0;31m Prog= 99.16%	N_left= 25600	Time= 34.83	Time_left= 0.29	iGF= 12908.11	GF= 37923.40	iGF_per= 1613.51 	GF_per= 4740.43 [0m
+!!!! WARNING: Rank: 2 : dgx05 : GPU 0000:0a:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 53 C 	Power: 129 W 	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 0 : dgx05 : GPU 0000:06:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 50 C 	Power: 123 W 	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 1 : dgx05 : GPU 0000:07:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 51 C 	Power: 110 W 	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 3 : dgx05 : GPU 0000:0b:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 49 C 	Power: 108 W 	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 7 : dgx05 : GPU 0000:8a:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 47 C 	Power: 101 W 	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 5 : dgx05 : GPU 0000:86:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 53 C 	Power: 106 W 	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 6 : dgx05 : GPU 0000:89:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 55 C 	Power: 123 W 	PCIe  gen 3 	 x16 
+!!!! WARNING: Rank: 4 : dgx05 : GPU 0000:85:00.0 	[0;31mClock: 1380 MHz [0m	Temp: 50 C 	Power: 120 W 	PCIe  gen 3 	 x16 
+[0;31m Prog= 99.89%	N_left= 13056	Time= 36.17	Time_left= 0.04	iGF=  7223.00	GF= 36783.51	iGF_per= 902.88 	GF_per= 4597.94 [0m
+[0;31m Prog= 100.00%	N_left= 512	Time= 36.82	Time_left= 0.00	iGF=  2311.47	GF= 36182.52	iGF_per= 288.93 	GF_per= 4522.82 [0m
+2018-05-30 18:02:02.858
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WR02L2L2      125952   256     4     2              37.53              3.549e+04 
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0037631 ...... PASSED
+================================================================================
+
+Finished      1 tests with the following results:
+              1 tests completed and passed residual checks,
+              0 tests completed and failed residual checks,
+              0 tests skipped because of illegal input values.
+--------------------------------------------------------------------------------
+
+End of Tests.
+================================================================================
+Per-Process Host Memory Estimate: 16.06 GB (MAX) 16.06 GB (MIN)
+WR02L2L2      125952   256     4     2              37.53              3.549e+04 

@@ -1,0 +1,86 @@
+#!/bin/bash
+#location of HPL
+HPL_DIR=`pwd`
+
+#export PATH=/home-2/award/openmpi-1.10.2_installation_centos72_gcc485_no_cuda/bin:$PATH
+#export LD_LIBRARY_PATH=/home-2/award/openmpi-1.10.2_installation_centos72_gcc485_no_cuda/lib:$LD_LIBRARY_PATH
+
+#export PATH=/home-2/award/openmpi-1.10.7_installation_no_cuda/bin:$PATH
+#export LD_LIBRARY_PATH=/home-2/award/openmpi-1.10.7_installation_no_cuda/lib:$LD_LIBRARY_PATH
+
+export PATH=/home/award/openmpi-3.1.0_installation_no_cuda_no_ucx/bin:$PATH
+export LD_LIBRARY_PATH=/home/award/openmpi-3.1.0_installation_no_cuda_no_ucx/lib:$LD_LIBRARY_PATH
+
+
+
+#module load cuda/9.0.103
+#module load cuda/9.0.176
+module load cuda/9.1.85
+#module load cuda/9.2.88
+
+module list
+
+nvidia-smi
+
+mpirun --version
+
+cp HPL.dat_4x2_2_node_hsw_p100x4 HPL.dat
+
+export HOSTNAME=`hostname`
+echo "HOSTNAME=$HOSTNAME"
+
+TEST_NAME=2_node_hsw_p100x4
+DATETIME=`hostname`.`date +"%m%d.%H%M%S"`
+mkdir ./results/HPL-$TEST_NAME-results-$DATETIME
+echo "Results in folder ./results/HPL-$TEST_NAME-results-$DATETIME"
+RESULT_FILE=./results/HPL-$TEST_NAME-results-$DATETIME/HPL-$TEST_NAME-results-$DATETIME-out.txt
+
+
+#nvidia-smi -pm 1
+
+#mpirun -np 2 -hostfile host_hsw_p100_2_node_4_slot_per -npernode 1 sudo nvidia-smi -ac 715,1189  # base clock for PCIE P100
+
+mpirun -np 2 -hostfile host_hsw_p100_2_node_4_slot_per -npernode 1 sudo nvidia-smi -ac 715,1290
+
+
+mpirun -np 8 -bind-to none -hostfile host_hsw_p100_2_node_4_slot_per -x LD_LIBRARY_PATH ./run_linpack_GPU_hsw32_4xp100 2>&1 | tee $RESULT_FILE
+
+
+echo "RESULTS in $RESULT_FILE" >> ./results/HPL-$TEST_NAME-results-$DATETIME/result_summary_with_detail.txt
+echo "********************************************************************************************************************" >> ./results/HPL-$TEST_NAME-results-$DATETIME/result_summary_with_detail.txt
+
+echo "CLK=$CLK"  >> ./results/HPL-$TEST_NAME-results-$DATETIME/result_summary_with_detail.txt
+grep "xhpl binary"  $RESULT_FILE  >> ./results/HPL-$TEST_NAME-results-$DATETIME/result_summary_with_detail.txt
+grep "CPU_CORES_PER_RANK"  $RESULT_FILE  >> ./results/HPL-$TEST_NAME-results-$DATETIME/result_summary_with_detail.txt
+grep "Per-Process Host Memory Estimate:" $RESULT_FILE  >> ./results/HPL-$TEST_NAME-results-$DATETIME/result_summary_with_detail.txt
+
+grep -B 1 -A 5 "T/V                N    NB     P     Q               Time                 Gflops" $RESULT_FILE  >> ./results/HPL-$TEST_NAME-results-$DATETIME/result_summary_with_detail.txt
+
+echo "********************************************************************************************************************" >> ./results/HPL-$TEST_NAME-results-$DATETIME/result_summary_with_detail.txt
+
+# accumulated result summary 
+echo "RESULTS in $RESULT_FILE" >> ./results/HPL-$TEST_NAME-results-$DATETIME/result_summary.txt
+grep "WR00C2C2\|WC00C2C2\|WC02L2L2\|WR02L2L2" $RESULT_FILE >> ./results/HPL-$TEST_NAME-results-$DATETIME/result_summary.txt
+
+# also save results from this run to seperate file and show at the end
+#grep "WR00C2C2\|WC00C2C2\|WC02L2L2|WR02L2L2" $RESULT_FILE >> ./results/result_summary_this_run_temp.txt
+
+cat ./results/HPL-$TEST_NAME-results-$DATETIME/result_summary.txt
+
+#rm ./results/result_summary_this_run_temp.txt
+
+
+
+
+
+
+#mpirun -np 8 -hostfile host_hsw_p100_2_node_4_slot_per -bind-to none -x LD_LIBRARY_PATH ./run_linpack_GPU_hsw32_4xp100 | tee ./results/HPL-4xp100-results-$DATETIME-2_node/HPL-4xp100-results-$DATETIME-2_node-out.txt
+
+#echo "Results in folder ./results/HPL-4xp100-results-$DATETIME"
+
+#grep -B 1 -A 5 "T/V                N    NB     P     Q               Time                 Gflops" ./results/HPL-4xp100-results-$DATETIME-2_node/HPL-4xp100-results-$DATETIME-2_node-out.txt | tee ./results/HPL-4xp100-results-$DATETIME-2_node/HPL-4xp100-results-$DATETIME-2_node-summary.txt
+
+
+
+
+

@@ -1,0 +1,61 @@
+#!/bin/bash
+#location of HPL
+HPL_DIR=`pwd`
+
+
+#export PATH=/home/award/openmpi-1.10.7_installation_no_cuda/bin:$PATH
+#export LD_LIBRARY_PATH=/home/award/openmpi-1.10.7_installation_no_cuda/lib:$LD_LIBRARY_PATH
+
+
+#export PATH=/home/award/openmpi-3.1.0_installation_no_cuda_no_ucx/bin:$PATH
+#export LD_LIBRARY_PATH=/home/award/openmpi-3.1.0_installation_no_cuda_no_ucx/lib:$LD_LIBRARY_PATH
+
+export PATH=/home/award/openmpi-3.1.2_with-ucx_without-cuda_without-slurm/bin:$PATH
+export LD_LIBRARY_PATH=/home/award/openmpi-3.1.2_with-ucx_without-cuda_without-slurm/lib::$LD_LIBRARY_PATH
+
+module load cuda/10.0.130
+
+module list
+
+nvidia-smi
+
+mpirun --version
+
+cp HPL.dat_2x2_1_node_dgx_v100x4 HPL.dat
+#cp HPL.dat_4-gpu_full-scan HPL.dat
+
+#export ICHUNK_SIZE=2048
+#export CHUNK_SIZE=3072
+
+#export ICHUNK_SIZE=2048
+#export CHUNK_SIZE=3072
+#export ICHUNK_SIZE=1536
+
+
+TEST_NAME=dgx1_v100x4
+DATETIME=`hostname`.`date +"%m%d.%H%M%S"`
+mkdir ./results/HPL-$TEST_NAME-results-$DATETIME
+echo "Results in folder ./results/HPL-$TEST_NAME-results-$DATETIME"
+RESULT_FILE=./results/HPL-$TEST_NAME-results-$DATETIME/HPL-$TEST_NAME-results-$DATETIME-out.txt
+
+
+nvidia-smi -pm 1
+
+#sudo nvidia-smi -ac 877,1245  # base clock for PCIE V100
+#sudo nvidia-smi -ac 877,1290
+sudo nvidia-smi -ac 877,1312 # base clock for sxm2 v100 
+#sudo nvidia-smi -ac 877,1380
+#sudo nvidia-smi -rac
+
+
+
+mpirun -np 4 -bind-to none  -x LD_LIBRARY_PATH ./run_linpack_GPU_dgx1_4xv100_cuda10 2>&1 | tee $RESULT_FILE
+
+
+# accumulated result summary
+echo "RESULTS in $RESULT_FILE" >> ./results/result_summary.txt
+#rep "WR00C2C2\|WC00C2C2\|WC02L2L2\|WR02L2L2" $RESULT_FILE >> ./results/result_summary.txt
+
+grep "Per-Process\|WC\|WR" $RESULT_FILE >> ./results/result_summary.txt
+#grep "Per-Process\|WC\|WR" $RESULT_FILE
+grep "WC\|WR" $RESULT_FILE

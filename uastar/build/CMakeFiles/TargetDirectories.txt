@@ -1,0 +1,4 @@
+/home/quest/uastar/build/CMakeFiles/edit_cache.dir
+/home/quest/uastar/build/CMakeFiles/rebuild_cache.dir
+/home/quest/uastar/build/CMakeFiles/demo-sort.dir
+/home/quest/uastar/build/CMakeFiles/uastar.dir

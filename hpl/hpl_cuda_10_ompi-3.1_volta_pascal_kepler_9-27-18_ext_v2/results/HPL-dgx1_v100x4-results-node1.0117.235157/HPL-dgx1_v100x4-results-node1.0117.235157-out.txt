@@ -1,0 +1,22 @@
+CPU_CORES_PER_RANK= 8
+CPU_CORES_PER_RANK= 8
+host=node1 rank= 0 lrank = 0 cores=8 bin=/home/benchmark/hpc-related/hpl/hpl_cuda_10_ompi-3.1_volta_pascal_kepler_9-27-18_ext_v2/xhpl_cuda-10.0-dyn_mkl-static_ompi-3.1.0_gcc4.8.5_9-26-18
+host=node1 rank= 1 lrank = 1 cores=8 bin=/home/benchmark/hpc-related/hpl/hpl_cuda_10_ompi-3.1_volta_pascal_kepler_9-27-18_ext_v2/xhpl_cuda-10.0-dyn_mkl-static_ompi-3.1.0_gcc4.8.5_9-26-18
+CPU_CORES_PER_RANK= 8
+CPU_CORES_PER_RANK= 8
+/home/benchmark/hpc-related/hpl/hpl_cuda_10_ompi-3.1_volta_pascal_kepler_9-27-18_ext_v2/xhpl_cuda-10.0-dyn_mkl-static_ompi-3.1.0_gcc4.8.5_9-26-18: error while loading shared libraries: libcudart.so.10.0: cannot open shared object file: No such file or directory
+/home/benchmark/hpc-related/hpl/hpl_cuda_10_ompi-3.1_volta_pascal_kepler_9-27-18_ext_v2/xhpl_cuda-10.0-dyn_mkl-static_ompi-3.1.0_gcc4.8.5_9-26-18: error while loading shared libraries: libcudart.so.10.0: cannot open shared object file: No such file or directory
+host=node1 rank= 2 lrank = 2 cores=8 bin=/home/benchmark/hpc-related/hpl/hpl_cuda_10_ompi-3.1_volta_pascal_kepler_9-27-18_ext_v2/xhpl_cuda-10.0-dyn_mkl-static_ompi-3.1.0_gcc4.8.5_9-26-18
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+host=node1 rank= 3 lrank = 3 cores=8 bin=/home/benchmark/hpc-related/hpl/hpl_cuda_10_ompi-3.1_volta_pascal_kepler_9-27-18_ext_v2/xhpl_cuda-10.0-dyn_mkl-static_ompi-3.1.0_gcc4.8.5_9-26-18
+/home/benchmark/hpc-related/hpl/hpl_cuda_10_ompi-3.1_volta_pascal_kepler_9-27-18_ext_v2/xhpl_cuda-10.0-dyn_mkl-static_ompi-3.1.0_gcc4.8.5_9-26-18: error while loading shared libraries: libcudart.so.10.0: cannot open shared object file: No such file or directory
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[25833,1],0]
+  Exit code:    127
+--------------------------------------------------------------------------

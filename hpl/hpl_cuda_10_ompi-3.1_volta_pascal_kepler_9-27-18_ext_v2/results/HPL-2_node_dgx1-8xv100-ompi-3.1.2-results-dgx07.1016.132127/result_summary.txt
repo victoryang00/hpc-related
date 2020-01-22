@@ -1,0 +1,9 @@
+RESULTS in ./results/HPL-2_node_dgx1-8xv100-ompi-3.1.2-results-dgx07.1016.132127/HPL-2_node_dgx1-8xv100-ompi-3.1.2-results-dgx07.1016.132127-out.txt
+WR02L2L2      175104   384     4     4              48.55              7.372e+04 
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0026248 ...... PASSED
+WR02L2L2      175104   256     4     4              48.02              7.455e+04 
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0027223 ...... PASSED
+WR02L2L2      178176   384     4     4              51.58              7.311e+04 
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0028639 ...... PASSED
+WR02L2L2      178176   256     4     4              50.86              7.415e+04 
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0027186 ...... PASSED

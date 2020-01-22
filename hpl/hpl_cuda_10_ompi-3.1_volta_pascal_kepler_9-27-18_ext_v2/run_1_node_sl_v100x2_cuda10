@@ -1,0 +1,65 @@
+#!/bin/bash
+#location of HPL
+HPL_DIR=`pwd`
+
+
+export PATH=/home/award/openmpi-3.1.2_with-ucx_without-cuda_without-slurm/bin:$PATH
+export LD_LIBRARY_PATH=/home/award/openmpi-3.1.2_with-ucx_without-cuda_without-slurm/lib::$LD_LIBRARY_PATH
+
+
+module load cuda/10.0.130
+
+module list
+
+nvidia-smi
+
+mpirun --version
+
+#export ICHUNK_SIZE=1536
+
+#cp HPL.dat_2-gpu_full-scan-32G HPL.dat
+#cp HPL.dat_2-gpu_nb384-scan-32G HPL.dat
+cp HPL.dat_2-gpu-32G HPL.dat
+
+#cp HPL.dat_2-gpu_full-scan-32G-high_N_range HPL.dat
+
+#export CHUNK_SIZE=4096
+#export ICHUNK_SIZE=4096
+
+
+
+
+TEST_NAME=sl_v100x2
+DATETIME=`hostname`.`date +"%m%d.%H%M%S"`
+mkdir ./results/HPL-$TEST_NAME-results-$DATETIME
+echo "Results in folder ./results/HPL-$TEST_NAME-results-$DATETIME"
+RESULT_FILE=./results/HPL-$TEST_NAME-results-$DATETIME/HPL-$TEST_NAME-results-$DATETIME-out.txt
+
+
+nvidia-smi -pm 1
+
+sudo nvidia-smi -ac 877,1230  # base clock for PCIE V100
+#sudo nvidia-smi -ac 877,1290
+#sudo nvidia-smi -ac 877,1380
+#sudo nvidia-smi -rac
+
+
+mpirun -np 2 -bind-to none  -x LD_LIBRARY_PATH ./run_linpack_GPU_sl40_2xv100_cuda10 2>&1 | tee $RESULT_FILE
+
+
+# accumulated result summary
+echo "RESULTS in $RESULT_FILE" >> ./results/result_summary.txt
+grep "WC\|WR" $RESULT_FILE >> ./results/result_summary.txt
+grep "WC\|WR" $RESULT_FILE
+
+
+
+
+
+
+
+
+
+
+
+

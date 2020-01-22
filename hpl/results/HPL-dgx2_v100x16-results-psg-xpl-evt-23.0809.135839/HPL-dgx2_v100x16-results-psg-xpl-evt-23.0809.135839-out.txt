@@ -1,0 +1,201 @@
+host= rank= 0 lrank = 0 cores=4 bin=/home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 1 lrank = 1 cores=4 bin=/home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 2 lrank = 2 cores=4 bin=/home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 3 lrank = 3 cores=4 bin=/home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 4 lrank = 4 cores=4 bin=/home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 5 lrank = 5 cores=4 bin=/home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 6 lrank = 6 cores=4 bin=/home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 7 lrank = 7 cores=4 bin=/home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 8 lrank = 8 cores=4 bin=/home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 9 lrank = 9 cores=4 bin=/home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 10 lrank = 10 cores=4 bin=/home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 11 lrank = 11 cores=4 bin=/home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 12 lrank = 12 cores=4 bin=/home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 13 lrank = 13 cores=4 bin=/home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 14 lrank = 14 cores=4 bin=/home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host= rank= 15 lrank = 15 cores=4 bin=/home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   psg-xpl-evt-23
+  Local device: mlx5_0
+--------------------------------------------------------------------------
+ibv_exp_query_device: invalid comp_mask !!! (comp_mask = 0x7f1ee72fc800 valid_mask = 0x1)
+[psg-xpl-evt-23][[13530,1],9][btl_openib_component.c:1670:init_one_device] error obtaining device attributes for mlx5_0 errno says Invalid argument
+--------------------------------------------------------------------------
+WARNING: There is at least non-excluded one OpenFabrics device found,
+but there are no active ports detected (or Open MPI was unable to use
+them).  This is most certainly not what you wanted.  Check your
+cables, subnet manager configuration, etc.  The openib BTL will be
+ignored for this job.
+
+  Local host: psg-xpl-evt-23
+--------------------------------------------------------------------------
+ibv_exp_query_device: invalid comp_mask !!! (comp_mask = 0x7efdf7afe800 valid_mask = 0x1)
+[psg-xpl-evt-23][[13530,1],0][btl_openib_component.c:1670:init_one_device] error obtaining device attributes for mlx5_0 errno says Invalid argument
+================================================================================
+HPLinpack 2.1  --  High-Performance Linpack benchmark  --   October 26, 2012
+Written by A. Petitet and R. Clint Whaley,  Innovative Computing Laboratory, UTK
+Modified by Piotr Luszczek, Innovative Computing Laboratory, UTK
+Modified by Julien Langou, University of Colorado Denver
+================================================================================
+
+An explanation of the input/output parameters follows:
+T/V    : Wall time / encoded variant.
+N      : The order of the coefficient matrix A.
+NB     : The partitioning blocking factor.
+P      : The number of process rows.
+Q      : The number of process columns.
+Time   : Time in seconds to solve the linear system.
+Gflops : Rate of execution for solving the linear system.
+
+The following parameter values will be used:
+
+N      :  125952 
+NB     :     256 
+PMAP   : Row-major process mapping
+P      :       4 
+Q      :       2 
+PFACT  :    Left 
+NBMIN  :       2 
+NDIV   :       2 
+RFACT  :    Left 
+BCAST  :   2ring 
+DEPTH  :       0 
+SWAP   : Spread-roll (long)
+L1     : no-transposed form
+U      : transposed form
+EQUIL  : yes
+ALIGN  : 8 double precision words
+
+--------------------------------------------------------------------------------
+
+- The matrix A is randomly generated for each test.
+- The following scaled residual check will be computed:
+      ||Ax-b||_oo / ( eps * ( || x ||_oo * || A ||_oo + || b ||_oo ) * N )
+- The relative machine precision (eps) is taken to be               1.110223e-16
+- Computational tests pass if scaled residuals are less than                16.0
+
+trsm_cutoff from environment variable 1000000 
+gpu_dgemm_split from environment variable 1.000 
+monitor_gpu from environment variable 1 
+gpu_temp_warning from environment variable 80 
+gpu_clock_warning from environment variable 1392 
+gpu_power_warning from environment variable 280 
+gpu_pcie_gen_warning from environment variable 3 
+gpu_pcie_width_warning from environment variable 16 
+[psg-xpl-evt-23:303685] 1 more process has sent help message help-mpi-btl-openib.txt / error in device init
+[psg-xpl-evt-23:303685] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[psg-xpl-evt-23:303685] 13 more processes have sent help message help-mpi-btl-openib.txt / no active ports found
+
+	******** TESTING SYSTEM PARAMETERS ********
+	PARAM 	[UNITS] 	MIN 	MAX 	AVG 
+	----- 	------- 	--- 	--- 	--- 
+CPU : 
+	CPU_BW	[GB/s ] 	7.8 	7.9 	7.9 
+	CPU_FP	[GFLPS] 
+	     	NB =   32 	  19 	  20 	  20 
+	     	NB =   64 	  37 	  38 	  38 
+	     	NB =  128 	  60 	  61 	  61 
+	     	NB =  256 	  74 	  77 	  75 
+	     	NB =  512 	  83 	  85 	  84 
+PCIE (NVLINK on IBM) : 
+	H2D_BW	[GB/s ] 	2.5 	2.5 	2.5 
+	D2H_BW	[GB/s ] 	2.6 	2.6 	2.6 
+	BID_BW	[GB/s ] 	3.7 	3.7 	3.7 
+CPU_BW concurrent with BID_BW : 
+	CPU_BW	[GB/s ] 	4.6 	5.9 	5.2 
+	BID_BW	[GB/s ] 	4.3 	4.8 	4.5 
+GPU : 
+	GPU_BW	[GB/s ] 	771 	775 	774 
+	GPU_FP	[GFLPS] 
+	     	NB =  128 	5645 	5665 	5655 
+	     	NB =  256 	6995 	7017 	7009 
+	     	NB =  384 	7191 	7455 	7320 
+	     	NB =  512 	7059 	7350 	7190 
+	     	NB =  640 	6919 	7337 	7135 
+	     	NB =  768 	6862 	7369 	7101 
+	     	NB =  896 	7014 	7454 	7219 
+	     	NB = 1024 	6998 	7363 	7200 
+NET : 
+	PROC COL NET_BW	[MB/s ] 
+[psg-xpl-evt-23:303754] *** Process received signal ***
+[psg-xpl-evt-23:303754] Signal: Segmentation fault (11)
+[psg-xpl-evt-23:303754] Signal code: Address not mapped (1)
+[psg-xpl-evt-23:303754] Failing at address: 0xe9
+[psg-xpl-evt-23:303725] *** Process received signal ***
+[psg-xpl-evt-23:303725] Signal: Segmentation fault (11)
+[psg-xpl-evt-23:303725] Signal code: Address not mapped (1)
+[psg-xpl-evt-23:303725] Failing at address: 0xe9
+[psg-xpl-evt-23:303719] *** Process received signal ***
+[psg-xpl-evt-23:303719] Signal: Segmentation fault (11)
+[psg-xpl-evt-23:303719] Signal code: Address not mapped (1)
+[psg-xpl-evt-23:303719] Failing at address: 0xe9
+[psg-xpl-evt-23:303731] *** Process received signal ***
+[psg-xpl-evt-23:303731] Signal: Segmentation fault (11)
+[psg-xpl-evt-23:303731] Signal code: Address not mapped (1)
+[psg-xpl-evt-23:303731] Failing at address: 0xe9
+[psg-xpl-evt-23:303736] *** Process received signal ***
+[psg-xpl-evt-23:303736] Signal: Segmentation fault (11)
+[psg-xpl-evt-23:303736] Signal code: Address not mapped (1)
+[psg-xpl-evt-23:303736] Failing at address: 0xe9
+[psg-xpl-evt-23:303742] *** Process received signal ***
+[psg-xpl-evt-23:303742] Signal: Segmentation fault (11)
+[psg-xpl-evt-23:303742] Signal code: Address not mapped (1)
+[psg-xpl-evt-23:303742] Failing at address: 0xe9
+[psg-xpl-evt-23:303747] *** Process received signal ***
+[psg-xpl-evt-23:303747] Signal: Segmentation fault (11)
+[psg-xpl-evt-23:303747] Signal code: Address not mapped (1)
+[psg-xpl-evt-23:303747] Failing at address: 0xe9
+[psg-xpl-evt-23:303751] *** Process received signal ***
+[psg-xpl-evt-23:303751] Signal: Segmentation fault (11)
+[psg-xpl-evt-23:303751] Signal code: Address not mapped (1)
+[psg-xpl-evt-23:303751] Failing at address: 0xe9
+[psg-xpl-evt-23:303754] [ 0] /lib/x86_64-linux-gnu/libpthread.so.0(+0x12890)[0x7f56183a2890]
+[psg-xpl-evt-23:303754] [ 1] /usr/local/lib/libmpi.so.40(MPI_Sendrecv+0x15b)[0x7f561886767b]
+[psg-xpl-evt-23:303754] [ 2] /home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18[0x40d281]
+[psg-xpl-evt-23:303754] [ 3] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7)[0x7f5617fc0b97]
+[psg-xpl-evt-23:303754] [ 4] /home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18[0x40ed40]
+[psg-xpl-evt-23:303754] *** End of error message ***
+[psg-xpl-evt-23:303725] [ 0] /lib/x86_64-linux-gnu/libpthread.so.0(+0x12890)[0x7f1ee2160890]
+[psg-xpl-evt-23:303725] [ 1] /usr/local/lib/libmpi.so.40(MPI_Sendrecv+0x15b)[0x7f1ee262567b]
+[psg-xpl-evt-23:303725] [ 2] /home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18[0x40d281]
+[psg-xpl-evt-23:303725] [ 3] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7)[0x7f1ee1d7eb97]
+[psg-xpl-evt-23:303725] [ 4] /home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18[0x40ed40]
+[psg-xpl-evt-23:303725] *** End of error message ***
+[psg-xpl-evt-23:303719] [ 0] /lib/x86_64-linux-gnu/libpthread.so.0(+0x12890)[0x7f8150b83890]
+[psg-xpl-evt-23:303719] [ 1] /usr/local/lib/libmpi.so.40(MPI_Sendrecv+0x15b)[0x7f815104867b]
+[psg-xpl-evt-23:303719] [ 2] /home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18[0x40d281]
+[psg-xpl-evt-23:303719] [ 3] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7)[0x7f81507a1b97]
+[psg-xpl-evt-23:303719] [ 4] /home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18[0x40ed40]
+[psg-xpl-evt-23:303731] [ 0] /lib/x86_64-linux-gnu/libpthread.so.0(+0x12890)[0x7fee0a9c7890]
+[psg-xpl-evt-23:303731] [ 1] /usr/local/lib/libmpi.so.40(MPI_Sendrecv+0x15b)[0x7fee0ae8c67b]
+[psg-xpl-evt-23:303731] [ 2] /home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18[0x40d281]
+[psg-xpl-evt-23:303731] [ 3] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7)[0x7fee0a5e5b97]
+[psg-xpl-evt-23:303731] [ 4] /home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18[0x40ed40]
+[psg-xpl-evt-23:303731] *** End of error message ***
+[psg-xpl-evt-23:303736] [ 0] /lib/x86_64-linux-gnu/libpthread.so.0(+0x12890)[0x7f92ed1a8890]
+[psg-xpl-evt-23:303736] [ 1] /usr/local/lib/libmpi.so.40(MPI_Sendrecv+0x15b)[0x7f92ed66d67b]
+[psg-xpl-evt-23:303736] [ 2] /home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18[0x40d281]
+[psg-xpl-evt-23:303736] [ 3] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7)[0x7f92ecdc6b97]
+[psg-xpl-evt-23:303736] [ 4] /home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18[0x40ed40]
+[psg-xpl-evt-23:303736] *** End of error message ***
+[psg-xpl-evt-23:303742] [ 0] /lib/x86_64-linux-gnu/libpthread.so.0(+0x12890)[0x7f48463bf890]
+[psg-xpl-evt-23:303742] [ 1] /usr/local/lib/libmpi.so.40(MPI_Sendrecv+0x15b)[0x7f484688467b]
+[psg-xpl-evt-23:303742] [ 2] /home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18[0x40d281]
+[psg-xpl-evt-23:303742] [ 3] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7)[0x7f4845fddb97]
+[psg-xpl-evt-23:303742] [ 4] /home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18[0x40ed40]
+[psg-xpl-evt-23:303742] *** End of error message ***
+[psg-xpl-evt-23:303747] [ 0] /lib/x86_64-linux-gnu/libpthread.so.0(+0x12890)[0x7f9691b3d890]
+[psg-xpl-evt-23:303747] [ 1] /usr/local/lib/libmpi.so.40(MPI_Sendrecv+0x15b)[0x7f969200267b]
+[psg-xpl-evt-23:303747] [ 2] /home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18[0x40d281]
+[psg-xpl-evt-23:303747] [ 3] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7)[0x7f969175bb97]
+[psg-xpl-evt-23:303747] [ 4] /home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18[0x40ed40]
+[psg-xpl-evt-23:303747] *** End of error message ***
+[psg-xpl-evt-23:303751] [ 0] /lib/x86_64-linux-gnu/libpthread.so.0(+0x12890)[0x7f75e3819890]
+[psg-xpl-evt-23:303751] [ 1] /usr/local/lib/libmpi.so.40(MPI_Sendrecv+0x15b)[0x7f75e3cde67b]
+[psg-xpl-evt-23:303751] [ 2] /home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18[0x40d281]
+[psg-xpl-evt-23:303751] [ 3] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7)[0x7f75e3437b97]
+[psg-xpl-evt-23:303751] [ 4] /home/lab/HPL/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18[0x40ed40]
+[psg-xpl-evt-23:303751] *** End of error message ***
+[psg-xpl-evt-23:303719] *** End of error message ***

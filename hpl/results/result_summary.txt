@@ -1,0 +1,23 @@
+RESULTS in ./results/HPL-dgx1_v100x2-results-dgx05.0530.175732/HPL-dgx1_v100x2-results-dgx05.0530.175732-out.txt
+Per-Process Host Memory Estimate: 17.35 GB (MAX) 17.35 GB (MIN)
+WR00L2L8       65280   384     2     1              16.36              1.133e+04 
+RESULTS in ./results/HPL-dgx1_v100x4-results-dgx05.0530.175854/HPL-dgx1_v100x4-results-dgx05.0530.175854-out.txt
+Per-Process Host Memory Estimate: 15.87 GB (MAX) 15.87 GB (MIN)
+WR02L2L2       88320   384     2     2              21.03              2.184e+04 
+RESULTS in ./results/HPL-dgx1_v100x8-results-dgx05.0530.180039/HPL-dgx1_v100x8-results-dgx05.0530.180039-out.txt
+Per-Process Host Memory Estimate: 16.06 GB (MAX) 16.06 GB (MIN)
+WR02L2L2      125952   256     4     2              37.53              3.549e+04 
+WR02L2L2       67200   384     2     1              25.70              7.872e+03 
+RESULTS in ./results/HPL-hsw_p100x4-results-hsw224.0531.100030/HPL-hsw_p100x4-results-hsw224.0531.100030-out.txt
+WR02L2L2       92928   384     2     2              37.13              1.441e+04 
+RESULTS in ./results/HPL-dgx2_v100x16-results-psg-xpl-evt-23.0809.135839/HPL-dgx2_v100x16-results-psg-xpl-evt-23.0809.135839-out.txt
+RESULTS in ./results/HPL-dgx2_v100x16-results-psg-xpl-evt-23.0809.135947/HPL-dgx2_v100x16-results-psg-xpl-evt-23.0809.135947-out.txt
+Per-Process Host Memory Estimate: 8.06 GB (MAX) 8.06 GB (MIN)
+WR02L2L2      125952   256     4     4              40.53              3.287e+04 
+RESULTS in ./results/HPL-dgx2_v100x16-results-psg-xpl-evt-23.0809.140857/HPL-dgx2_v100x16-results-psg-xpl-evt-23.0809.140857-out.txt
+Per-Process Host Memory Estimate: 8.06 GB (MAX) 8.06 GB (MIN)
+WR02L2L2      125952   256     4     4              41.96              3.175e+04 
+RESULTS in ./results/HPL-dgx1_v100x8-results-node1.0117.234736/HPL-dgx1_v100x8-results-node1.0117.234736-out.txt
+RESULTS in ./results/HPL-dgx1_v100x4-results-node1.0117.234943/HPL-dgx1_v100x4-results-node1.0117.234943-out.txt
+RESULTS in ./results/HPL-dgx1_v100x4-results-node1.0117.235007/HPL-dgx1_v100x4-results-node1.0117.235007-out.txt
+RESULTS in ./results/HPL-dgx1_v100x4-results-node1.0117.235052/HPL-dgx1_v100x4-results-node1.0117.235052-out.txt

@@ -1,0 +1,2 @@
+RESULTS in ./results/HPL-2_node_hsw_p100x4-results-hsw224.0531.101216/HPL-2_node_hsw_p100x4-results-hsw224.0531.101216-out.txt
+WR02L2L2      132096   384     2     4              55.94              2.747e+04 

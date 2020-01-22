@@ -1,0 +1,5 @@
+[mpiexec@node1] match_arg (utils/args/args.c:159): unrecognized argument x
+[mpiexec@node1] HYDU_parse_array (utils/args/args.c:174): argument matching returned error
+[mpiexec@node1] parse_args (ui/mpich/utils.c:1596): error parsing input array
+[mpiexec@node1] HYD_uii_mpx_get_parameters (ui/mpich/utils.c:1648): unable to parse user arguments
+[mpiexec@node1] main (ui/mpich/mpiexec.c:153): error parsing parameters

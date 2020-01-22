@@ -1,0 +1,20 @@
+CPU_CORES_PER_RANK= 9
+host=node1 rank= 0 lrank = 0 cores=9 bin=/home/benchmark/hpc-related/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+CPU_CORES_PER_RANK= 9
+./run_linpack_GPU_dgx1_4xv100: line 57: numactl: command not found
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+CPU_CORES_PER_RANK= 9
+host=node1 rank= 1 lrank = 1 cores=9 bin=/home/benchmark/hpc-related/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+CPU_CORES_PER_RANK= 9
+./run_linpack_GPU_dgx1_4xv100: line 65: numactl: command not found
+host=node1 rank= 2 lrank = 2 cores=9 bin=/home/benchmark/hpc-related/hpl/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+--------------------------------------------------------------------------
+mpirun detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[26083,1],0]
+  Exit code:    127
+--------------------------------------------------------------------------

@@ -1,0 +1,352 @@
+Currently Loaded Modulefiles:
+  1) slurm/16.05.0   2) cuda/9.2.88     3) cuda/9.1.85
+Wed May 30 17:57:31 2018       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 396.26                 Driver Version: 396.26                    |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:06:00.0 Off |                    0 |
+| N/A   35C    P0    44W / 300W |      0MiB / 16160MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  Tesla V100-SXM2...  On   | 00000000:07:00.0 Off |                    0 |
+| N/A   35C    P0    42W / 300W |      0MiB / 16160MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   2  Tesla V100-SXM2...  On   | 00000000:0A:00.0 Off |                    0 |
+| N/A   38C    P0    44W / 300W |      0MiB / 16160MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   3  Tesla V100-SXM2...  On   | 00000000:0B:00.0 Off |                    0 |
+| N/A   35C    P0    43W / 300W |      0MiB / 16160MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   4  Tesla V100-SXM2...  On   | 00000000:85:00.0 Off |                    0 |
+| N/A   36C    P0    43W / 300W |      0MiB / 16160MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   5  Tesla V100-SXM2...  On   | 00000000:86:00.0 Off |                    0 |
+| N/A   37C    P0    43W / 300W |      0MiB / 16160MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   6  Tesla V100-SXM2...  On   | 00000000:89:00.0 Off |                    0 |
+| N/A   38C    P0    43W / 300W |      0MiB / 16160MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+|   7  Tesla V100-SXM2...  On   | 00000000:8A:00.0 Off |                    0 |
+| N/A   35C    P0    42W / 300W |      0MiB / 16160MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+mpirun (Open MPI) 3.1.0
+
+Report bugs to http://www.open-mpi.org/community/help/
+Results in folder ./results/HPL-dgx1_v100x2-results-dgx05.0530.175732
+Persistence mode is already Enabled for GPU 00000000:06:00.0.
+Persistence mode is already Enabled for GPU 00000000:07:00.0.
+Persistence mode is already Enabled for GPU 00000000:0A:00.0.
+Persistence mode is already Enabled for GPU 00000000:0B:00.0.
+Persistence mode is already Enabled for GPU 00000000:85:00.0.
+Persistence mode is already Enabled for GPU 00000000:86:00.0.
+Persistence mode is already Enabled for GPU 00000000:89:00.0.
+Persistence mode is already Enabled for GPU 00000000:8A:00.0.
+All done.
+Applications clocks set to "(MEM 877, SM 1380)" for GPU 00000000:06:00.0
+Applications clocks set to "(MEM 877, SM 1380)" for GPU 00000000:07:00.0
+Applications clocks set to "(MEM 877, SM 1380)" for GPU 00000000:0A:00.0
+Applications clocks set to "(MEM 877, SM 1380)" for GPU 00000000:0B:00.0
+Applications clocks set to "(MEM 877, SM 1380)" for GPU 00000000:85:00.0
+Applications clocks set to "(MEM 877, SM 1380)" for GPU 00000000:86:00.0
+Applications clocks set to "(MEM 877, SM 1380)" for GPU 00000000:89:00.0
+Applications clocks set to "(MEM 877, SM 1380)" for GPU 00000000:8A:00.0
+All done.
+CPU_CORES_PER_RANK= 16
+CPU_CORES_PER_RANK= 16
+xhpl binary= /home/award/HPL/hpl_cuda_9.0_9.1_9.2_opmi1.10_3.1_gcc485_volta_pascal_kepler_5_18_18/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+xhpl binary= /home/award/HPL/hpl_cuda_9.0_9.1_9.2_opmi1.10_3.1_gcc485_volta_pascal_kepler_5_18_18/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+host=dgx05 rank= 1 lrank = 1 cores=16 bin=/home/award/HPL/hpl_cuda_9.0_9.1_9.2_opmi1.10_3.1_gcc485_volta_pascal_kepler_5_18_18/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+	linux-vdso.so.1 =>  (0x00002aaaaaaab000)
+	libcudart.so.9.2 => /cm/extra/apps/CUDA.linux86-64/9.2.88_396.26/lib64/libcudart.so.9.2 (0x00002aaaaaaaf000)
+	libcublas.so.9.2 => /cm/extra/apps/CUDA.linux86-64/9.2.88_396.26/lib64/libcublas.so.9.2 (0x00002aaaaad19000)
+	libnvidia-ml.so.1 => /usr/lib64/libnvidia-ml.so.1 (0x00002aaaae74c000)
+	libdl.so.2 => /usr/lib64/libdl.so.2 (0x00002aaaaed3b000)
+	libm.so.6 => /usr/lib64/libm.so.6 (0x00002aaaaef3f000)
+	libmpi.so.40 => /home/award/openmpi-3.1.0_installation_no_cuda_no_ucx/lib/libmpi.so.40 (0x00002aaaaf241000)
+	libgomp.so.1 => /usr/lib64/libgomp.so.1 (0x00002aaaaf53f000)
+	libpthread.so.0 => /usr/lib64/libpthread.so.0 (0x00002aaaaf765000)
+	libc.so.6 => /usr/lib64/libc.so.6 (0x00002aaaaf981000)
+	/lib64/ld-linux-x86-64.so.2 (0x0000555555554000)
+	librt.so.1 => /usr/lib64/librt.so.1 (0x00002aaaafd43000)
+	libstdc++.so.6 => /usr/lib64/libstdc++.so.6 (0x00002aaaaff4b000)
+	libgcc_s.so.1 => /usr/lib64/libgcc_s.so.1 (0x00002aaab0254000)
+	libopen-rte.so.40 => /home/award/openmpi-3.1.0_installation_no_cuda_no_ucx/lib/libopen-rte.so.40 (0x00002aaab046b000)
+	libopen-pal.so.40 => /home/award/openmpi-3.1.0_installation_no_cuda_no_ucx/lib/libopen-pal.so.40 (0x00002aaab0720000)
+	libnuma.so.1 => /usr/lib64/libnuma.so.1 (0x00002aaab0a29000)
+	libpciaccess.so.0 => /usr/lib64/libpciaccess.so.0 (0x00002aaab0c36000)
+	libutil.so.1 => /usr/lib64/libutil.so.1 (0x00002aaab0e40000)
+	libz.so.1 => /usr/lib64/libz.so.1 (0x00002aaab1043000)
+host=dgx05 rank= 0 lrank = 0 cores=16 bin=/home/award/HPL/hpl_cuda_9.0_9.1_9.2_opmi1.10_3.1_gcc485_volta_pascal_kepler_5_18_18/xhpl_cuda9.2.88_mkl_2018_ompi_3.1.0_gcc485_sm35_sm60_sm70_5_18_18
+--------------------------------------------------------------------------
+WARNING: There are more than one active ports on host 'dgx05', but the
+default subnet GID prefix was detected on more than one of these
+ports.  If these ports are connected to different physical IB
+networks, this configuration will fail in Open MPI.  This version of
+Open MPI requires that every physically separate IB subnet that is
+used between connected MPI processes must have different subnet ID
+values.
+
+Please see this FAQ entry for more details:
+
+  http://www.open-mpi.org/faq/?category=openfabrics#ofa-default-subnet-gid
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_default_gid_prefix to 0.
+--------------------------------------------------------------------------
+================================================================================
+HPLinpack 2.1  --  High-Performance Linpack benchmark  --   October 26, 2012
+Written by A. Petitet and R. Clint Whaley,  Innovative Computing Laboratory, UTK
+Modified by Piotr Luszczek, Innovative Computing Laboratory, UTK
+Modified by Julien Langou, University of Colorado Denver
+================================================================================
+
+An explanation of the input/output parameters follows:
+T/V    : Wall time / encoded variant.
+N      : The order of the coefficient matrix A.
+NB     : The partitioning blocking factor.
+P      : The number of process rows.
+Q      : The number of process columns.
+Time   : Time in seconds to solve the linear system.
+Gflops : Rate of execution for solving the linear system.
+
+The following parameter values will be used:
+
+N      :   65280 
+NB     :     384 
+PMAP   : Row-major process mapping
+P      :       2 
+Q      :       1 
+PFACT  :    Left 
+NBMIN  :       8 
+NDIV   :       2 
+RFACT  :    Left 
+BCAST  :   1ring 
+DEPTH  :       0 
+SWAP   : Spread-roll (long)
+L1     : no-transposed form
+U      : transposed form
+EQUIL  : no
+ALIGN  : 8 double precision words
+
+--------------------------------------------------------------------------------
+
+- The matrix A is randomly generated for each test.
+- The following scaled residual check will be computed:
+      ||Ax-b||_oo / ( eps * ( || x ||_oo * || A ||_oo + || b ||_oo ) * N )
+- The relative machine precision (eps) is taken to be               1.110223e-16
+- Computational tests pass if scaled residuals are less than                16.0
+
+trsm_cutoff from environment variable 1000000 
+gpu_dgemm_split from environment variable 1.000 
+monitor_gpu from environment variable 1 
+gpu_temp_warning from environment variable 75 
+gpu_clock_warning from environment variable 1312 
+gpu_power_warning from environment variable 280 
+gpu_pcie_gen_warning from environment variable 3 
+gpu_pcie_width_warning from environment variable 16 
+
+	******** TESTING SYSTEM PARAMETERS ********
+	PARAM 	[UNITS] 	MIN 	MAX 	AVG 
+	----- 	------- 	--- 	--- 	--- 
+[dgx05:45077] 1 more process has sent help message help-mpi-btl-openib.txt / default subnet prefix
+[dgx05:45077] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+CPU : 
+	CPU_BW	[GB/s ] 	38.2 	38.2 	38.2 
+	CPU_FP	[GFLPS] 
+	     	NB =   32 	  99 	 100 	 100 
+	     	NB =   64 	 196 	 196 	 196 
+	     	NB =  128 	 324 	 327 	 325 
+	     	NB =  256 	 406 	 406 	 406 
+	     	NB =  512 	 471 	 472 	 472 
+PCIE (NVLINK on IBM) : 
+	H2D_BW	[GB/s ] 	10.2 	10.3 	10.3 
+	D2H_BW	[GB/s ] 	11.6 	11.6 	11.6 
+	BID_BW	[GB/s ] 	17.3 	17.3 	17.3 
+CPU_BW concurrent with BID_BW : 
+	CPU_BW	[GB/s ] 	32.1 	32.2 	32.1 
+	BID_BW	[GB/s ] 	9.7 	9.7 	9.7 
+GPU : 
+	GPU_BW	[GB/s ] 	779 	780 	779 
+	GPU_FP	[GFLPS] 
+	     	NB =  128 	5850 	5855 	5852 
+	     	NB =  256 	6466 	6471 	6468 
+	     	NB =  384 	6879 	6882 	6880 
+	     	NB =  512 	6600 	6671 	6635 
+	     	NB =  640 	6806 	6834 	6820 
+	     	NB =  768 	6660 	6735 	6698 
+	     	NB =  896 	6827 	6897 	6862 
+	     	NB = 1024 	6816 	6821 	6819 
+NET : 
+	PROC COL NET_BW	[MB/s ] 
+		     8 B  	  22 	  22 	  22 
+		    64 B  	 154 	 154 	 154 
+		   512 B  	 647 	 647 	 647 
+		     4 KB 	2837 	2837 	2837 
+		    32 KB 	11407 	11407 	11407 
+		   256 KB 	19603 	19603 	19603 
+		  2048 KB 	16946 	16946 	16946 
+		 16384 KB 	7175 	7175 	7175 
+	NET_LAT	[ us  ] 	1.0 	1.3 	1.1 
+
+	PROC ROW NET_BW	[MB/s ] 
+		     8 B  	 109 	 135 	 122 
+		    64 B  	 844 	1085 	 964 
+		   512 B  	5331 	6666 	5998 
+		     4 KB 	15876 	21164 	18520 
+		    32 KB 	21212 	22459 	21835 
+		   256 KB 	21596 	21833 	21714 
+		  2048 KB 	21176 	21272 	21224 
+		 16384 KB 	13680 	13859 	13770 
+	NET_LAT	[ us  ] 	0.0 	0.0 	0.0 
+
+displaying Prog:%complete, N:columns, Time:seconds
+iGF:instantaneous GF, GF:avg GF, GF_per: process GF
+
+
+Per-Process Host Memory Estimate: 17.35 GB (MAX) 17.35 GB (MIN)
+
+PCOL: 0 GPU_COLS: 59137 CPU_COLS: 6144 
+2018-05-30 17:58:05.747
+[0;31m Prog= 1.75%	N_left= 64896	Time= 0.40	Time_left= 22.53	iGF=  8087.57	GF=  8087.57	iGF_per= 4043.79 	GF_per= 4043.79 [0m
+[0;31m Prog= 3.49%	N_left= 64512	Time= 0.67	Time_left= 18.60	iGF= 11910.79	GF=  9622.84	iGF_per= 5955.40 	GF_per= 4811.42 [0m
+[0;31m Prog= 5.20%	N_left= 64128	Time= 0.94	Time_left= 17.14	iGF= 11857.45	GF= 10259.70	iGF_per= 5928.73 	GF_per= 5129.85 [0m
+[0;31m Prog= 6.89%	N_left= 63744	Time= 1.17	Time_left= 15.76	iGF= 13865.28	GF= 10959.49	iGF_per= 6932.64 	GF_per= 5479.75 [0m
+[0;31m Prog= 8.57%	N_left= 63360	Time= 1.40	Time_left= 14.96	iGF= 13215.46	GF= 11337.35	iGF_per= 6607.73 	GF_per= 5668.67 [0m
+[0;31m Prog= 10.22%	N_left= 62976	Time= 1.65	Time_left= 14.49	iGF= 12366.00	GF= 11491.92	iGF_per= 6183.00 	GF_per= 5745.96 [0m
+[0;31m Prog= 11.85%	N_left= 62592	Time= 1.88	Time_left= 14.00	iGF= 13019.30	GF= 11680.67	iGF_per= 6509.65 	GF_per= 5840.33 [0m
+[0;31m Prog= 13.46%	N_left= 62208	Time= 2.08	Time_left= 13.40	iGF= 14743.12	GF= 11978.66	iGF_per= 7371.56 	GF_per= 5989.33 [0m
+[0;31m Prog= 15.06%	N_left= 61824	Time= 2.29	Time_left= 12.90	iGF= 14560.78	GF= 12207.65	iGF_per= 7280.39 	GF_per= 6103.83 [0m
+[0;31m Prog= 16.63%	N_left= 61440	Time= 2.52	Time_left= 12.62	iGF= 12681.93	GF= 12250.99	iGF_per= 6340.97 	GF_per= 6125.50 [0m
+[0;31m Prog= 18.18%	N_left= 61056	Time= 2.75	Time_left= 12.35	iGF= 12637.87	GF= 12283.12	iGF_per= 6318.94 	GF_per= 6141.56 [0m
+[0;31m Prog= 19.72%	N_left= 60672	Time= 2.97	Time_left= 12.09	iGF= 12650.98	GF= 12310.97	iGF_per= 6325.49 	GF_per= 6155.48 [0m
+[0;31m Prog= 21.23%	N_left= 60288	Time= 3.19	Time_left= 11.84	iGF= 12703.66	GF= 12338.18	iGF_per= 6351.83 	GF_per= 6169.09 [0m
+[0;31m Prog= 22.73%	N_left= 59904	Time= 3.41	Time_left= 11.59	iGF= 12822.67	GF= 12368.93	iGF_per= 6411.34 	GF_per= 6184.47 [0m
+[0;31m Prog= 24.20%	N_left= 59520	Time= 3.61	Time_left= 11.30	iGF= 13703.47	GF= 12442.85	iGF_per= 6851.74 	GF_per= 6221.43 [0m
+[0;31m Prog= 25.66%	N_left= 59136	Time= 3.82	Time_left= 11.07	iGF= 12636.64	GF= 12453.70	iGF_per= 6318.32 	GF_per= 6226.85 [0m
+[0;31m Prog= 27.10%	N_left= 58752	Time= 4.03	Time_left= 10.85	iGF= 12647.13	GF= 12463.82	iGF_per= 6323.57 	GF_per= 6231.91 [0m
+[0;31m Prog= 28.52%	N_left= 58368	Time= 4.24	Time_left= 10.64	iGF= 12449.76	GF= 12463.12	iGF_per= 6224.88 	GF_per= 6231.56 [0m
+[0;31m Prog= 29.92%	N_left= 57984	Time= 4.45	Time_left= 10.41	iGF= 12900.49	GF= 12482.95	iGF_per= 6450.24 	GF_per= 6241.47 [0m
+[0;31m Prog= 31.30%	N_left= 57600	Time= 4.65	Time_left= 10.20	iGF= 12688.23	GF= 12491.87	iGF_per= 6344.11 	GF_per= 6245.94 [0m
+[0;31m Prog= 32.67%	N_left= 57216	Time= 4.85	Time_left= 9.99	iGF= 12690.81	GF= 12500.06	iGF_per= 6345.41 	GF_per= 6250.03 [0m
+[0;31m Prog= 34.02%	N_left= 56832	Time= 5.05	Time_left= 9.79	iGF= 12448.70	GF= 12498.02	iGF_per= 6224.35 	GF_per= 6249.01 [0m
+!!!! WARNING: Rank: 0 : dgx05 : GPU 0000:06:00.0 	Clock: 1380 MHz 	Temp: 51 C 	[0;31mPower: 299 W [0m	PCIe  gen 3 	 x16 
+[0;31m Prog= 35.34%	N_left= 56448	Time= 5.24	Time_left= 9.59	iGF= 12626.90	GF= 12502.82	iGF_per= 6313.45 	GF_per= 6251.41 [0m
+!!!! WARNING: Rank: 1 : dgx05 : GPU 0000:85:00.0 	Clock: 1357 MHz 	Temp: 51 C 	[0;31mPower: 294 W [0m	PCIe  gen 3 	 x16 
+[0;31m Prog= 36.66%	N_left= 56064	Time= 5.43	Time_left= 9.39	iGF= 12780.11	GF= 12512.52	iGF_per= 6390.05 	GF_per= 6256.26 [0m
+[0;31m Prog= 37.95%	N_left= 55680	Time= 5.62	Time_left= 9.20	iGF= 12553.91	GF= 12513.93	iGF_per= 6276.95 	GF_per= 6256.96 [0m
+[0;31m Prog= 39.22%	N_left= 55296	Time= 5.81	Time_left= 9.00	iGF= 12655.02	GF= 12518.46	iGF_per= 6327.51 	GF_per= 6259.23 [0m
+[0;31m Prog= 40.48%	N_left= 54912	Time= 6.00	Time_left= 8.82	iGF= 12639.10	GF= 12522.18	iGF_per= 6319.55 	GF_per= 6261.09 [0m
+[0;31m Prog= 41.72%	N_left= 54528	Time= 6.18	Time_left= 8.63	iGF= 12368.94	GF= 12517.57	iGF_per= 6184.47 	GF_per= 6258.78 [0m
+[0;31m Prog= 42.94%	N_left= 54144	Time= 6.36	Time_left= 8.45	iGF= 12797.43	GF= 12525.37	iGF_per= 6398.71 	GF_per= 6262.68 [0m
+[0;31m Prog= 44.15%	N_left= 53760	Time= 6.54	Time_left= 8.28	iGF= 12196.91	GF= 12516.16	iGF_per= 6098.46 	GF_per= 6258.08 [0m
+[0;31m Prog= 45.34%	N_left= 53376	Time= 6.71	Time_left= 8.09	iGF= 12888.81	GF= 12525.66	iGF_per= 6444.41 	GF_per= 6262.83 [0m
+[0;31m Prog= 46.51%	N_left= 52992	Time= 6.89	Time_left= 7.92	iGF= 12579.59	GF= 12527.01	iGF_per= 6289.79 	GF_per= 6263.50 [0m
+[0;31m Prog= 47.66%	N_left= 52608	Time= 7.05	Time_left= 7.75	iGF= 12645.76	GF= 12529.86	iGF_per= 6322.88 	GF_per= 6264.93 [0m
+[0;31m Prog= 48.80%	N_left= 52224	Time= 7.22	Time_left= 7.58	iGF= 12484.45	GF= 12528.80	iGF_per= 6242.22 	GF_per= 6264.40 [0m
+[0;31m Prog= 49.92%	N_left= 51840	Time= 7.39	Time_left= 7.42	iGF= 12226.33	GF= 12521.84	iGF_per= 6113.17 	GF_per= 6260.92 [0m
+[0;31m Prog= 51.03%	N_left= 51456	Time= 7.55	Time_left= 7.25	iGF= 12958.59	GF= 12530.98	iGF_per= 6479.29 	GF_per= 6265.49 [0m
+[0;31m Prog= 52.11%	N_left= 51072	Time= 7.71	Time_left= 7.09	iGF= 12603.14	GF= 12532.48	iGF_per= 6301.57 	GF_per= 6266.24 [0m
+[0;31m Prog= 53.19%	N_left= 50688	Time= 7.87	Time_left= 6.93	iGF= 12497.85	GF= 12531.78	iGF_per= 6248.92 	GF_per= 6265.89 [0m
+[0;31m Prog= 54.24%	N_left= 50304	Time= 8.03	Time_left= 6.77	iGF= 12610.48	GF= 12533.30	iGF_per= 6305.24 	GF_per= 6266.65 [0m
+[0;31m Prog= 55.28%	N_left= 49920	Time= 8.18	Time_left= 6.62	iGF= 12489.76	GF= 12532.48	iGF_per= 6244.88 	GF_per= 6266.24 [0m
+[0;31m Prog= 56.31%	N_left= 49536	Time= 8.33	Time_left= 6.47	iGF= 12526.10	GF= 12532.36	iGF_per= 6263.05 	GF_per= 6266.18 [0m
+[0;31m Prog= 57.31%	N_left= 49152	Time= 8.48	Time_left= 6.32	iGF= 12512.69	GF= 12532.02	iGF_per= 6256.34 	GF_per= 6266.01 [0m
+[0;31m Prog= 58.31%	N_left= 48768	Time= 8.63	Time_left= 6.17	iGF= 12547.04	GF= 12532.27	iGF_per= 6273.52 	GF_per= 6266.14 [0m
+[0;31m Prog= 59.28%	N_left= 48384	Time= 8.77	Time_left= 6.03	iGF= 12568.95	GF= 12532.88	iGF_per= 6284.47 	GF_per= 6266.44 [0m
+[0;31m Prog= 60.25%	N_left= 48000	Time= 8.92	Time_left= 5.89	iGF= 12143.77	GF= 12526.47	iGF_per= 6071.88 	GF_per= 6263.23 [0m
+[0;31m Prog= 61.19%	N_left= 47616	Time= 9.06	Time_left= 5.74	iGF= 12692.28	GF= 12529.00	iGF_per= 6346.14 	GF_per= 6264.50 [0m
+[0;31m Prog= 62.12%	N_left= 47232	Time= 9.20	Time_left= 5.61	iGF= 12329.86	GF= 12525.97	iGF_per= 6164.93 	GF_per= 6262.98 [0m
+[0;31m Prog= 63.04%	N_left= 46848	Time= 9.34	Time_left= 5.47	iGF= 12193.85	GF= 12521.01	iGF_per= 6096.93 	GF_per= 6260.51 [0m
+[0;31m Prog= 63.94%	N_left= 46464	Time= 9.47	Time_left= 5.34	iGF= 12878.05	GF= 12525.91	iGF_per= 6439.02 	GF_per= 6262.95 [0m
+[0;31m Prog= 64.83%	N_left= 46080	Time= 9.60	Time_left= 5.21	iGF= 12350.45	GF= 12523.47	iGF_per= 6175.22 	GF_per= 6261.74 [0m
+[0;31m Prog= 65.70%	N_left= 45696	Time= 9.73	Time_left= 5.08	iGF= 12501.82	GF= 12523.19	iGF_per= 6250.91 	GF_per= 6261.59 [0m
+[0;31m Prog= 66.56%	N_left= 45312	Time= 9.86	Time_left= 4.95	iGF= 12497.24	GF= 12522.85	iGF_per= 6248.62 	GF_per= 6261.43 [0m
+[0;31m Prog= 67.40%	N_left= 44928	Time= 9.98	Time_left= 4.83	iGF= 12385.30	GF= 12521.11	iGF_per= 6192.65 	GF_per= 6260.56 [0m
+[0;31m Prog= 68.23%	N_left= 44544	Time= 10.11	Time_left= 4.71	iGF= 12349.96	GF= 12519.00	iGF_per= 6174.98 	GF_per= 6259.50 [0m
+[0;31m Prog= 69.04%	N_left= 44160	Time= 10.23	Time_left= 4.59	iGF= 12382.17	GF= 12517.37	iGF_per= 6191.09 	GF_per= 6258.69 [0m
+!!!! WARNING: Rank: 0 : dgx05 : GPU 0000:06:00.0 	Clock: 1372 MHz 	Temp: 54 C 	[0;31mPower: 296 W [0m	PCIe  gen 3 	 x16 
+[0;31m Prog= 69.84%	N_left= 43776	Time= 10.35	Time_left= 4.47	iGF= 12066.72	GF= 12512.02	iGF_per= 6033.36 	GF_per= 6256.01 [0m
+!!!! WARNING: Rank: 1 : dgx05 : GPU 0000:85:00.0 	Clock: 1357 MHz 	Temp: 54 C 	[0;31mPower: 287 W [0m	PCIe  gen 3 	 x16 
+[0;31m Prog= 70.63%	N_left= 43392	Time= 10.47	Time_left= 4.35	iGF= 12655.15	GF= 12513.59	iGF_per= 6327.57 	GF_per= 6256.80 [0m
+[0;31m Prog= 71.40%	N_left= 43008	Time= 10.59	Time_left= 4.24	iGF= 12088.17	GF= 12508.83	iGF_per= 6044.09 	GF_per= 6254.41 [0m
+[0;31m Prog= 72.16%	N_left= 42624	Time= 10.70	Time_left= 4.13	iGF= 12704.75	GF= 12510.86	iGF_per= 6352.38 	GF_per= 6255.43 [0m
+[0;31m Prog= 72.91%	N_left= 42240	Time= 10.81	Time_left= 4.02	iGF= 12289.27	GF= 12508.55	iGF_per= 6144.63 	GF_per= 6254.28 [0m
+[0;31m Prog= 73.64%	N_left= 41856	Time= 10.92	Time_left= 3.91	iGF= 12409.47	GF= 12507.56	iGF_per= 6204.73 	GF_per= 6253.78 [0m
+[0;31m Prog= 74.36%	N_left= 41472	Time= 11.03	Time_left= 3.80	iGF= 12243.34	GF= 12504.95	iGF_per= 6121.67 	GF_per= 6252.47 [0m
+[0;31m Prog= 75.07%	N_left= 41088	Time= 11.13	Time_left= 3.70	iGF= 12321.38	GF= 12503.20	iGF_per= 6160.69 	GF_per= 6251.60 [0m
+[0;31m Prog= 75.76%	N_left= 40704	Time= 11.24	Time_left= 3.60	iGF= 12386.10	GF= 12502.12	iGF_per= 6193.05 	GF_per= 6251.06 [0m
+[0;31m Prog= 76.44%	N_left= 40320	Time= 11.34	Time_left= 3.50	iGF= 12411.02	GF= 12501.30	iGF_per= 6205.51 	GF_per= 6250.65 [0m
+[0;31m Prog= 77.10%	N_left= 39936	Time= 11.44	Time_left= 3.40	iGF= 12302.18	GF= 12499.55	iGF_per= 6151.09 	GF_per= 6249.78 [0m
+[0;31m Prog= 77.76%	N_left= 39552	Time= 11.54	Time_left= 3.30	iGF= 12357.02	GF= 12498.34	iGF_per= 6178.51 	GF_per= 6249.17 [0m
+[0;31m Prog= 78.40%	N_left= 39168	Time= 11.64	Time_left= 3.21	iGF= 12306.01	GF= 12496.74	iGF_per= 6153.00 	GF_per= 6248.37 [0m
+[0;31m Prog= 79.03%	N_left= 38784	Time= 11.73	Time_left= 3.11	iGF= 11971.84	GF= 12492.38	iGF_per= 5985.92 	GF_per= 6246.19 [0m
+[0;31m Prog= 79.65%	N_left= 38400	Time= 11.82	Time_left= 3.02	iGF= 12613.49	GF= 12493.31	iGF_per= 6306.75 	GF_per= 6246.65 [0m
+[0;31m Prog= 80.25%	N_left= 38016	Time= 11.91	Time_left= 2.93	iGF= 12297.33	GF= 12491.81	iGF_per= 6148.66 	GF_per= 6245.90 [0m
+[0;31m Prog= 80.84%	N_left= 37632	Time= 12.00	Time_left= 2.84	iGF= 12219.97	GF= 12489.77	iGF_per= 6109.98 	GF_per= 6244.89 [0m
+[0;31m Prog= 81.42%	N_left= 37248	Time= 12.09	Time_left= 2.76	iGF= 12215.32	GF= 12487.77	iGF_per= 6107.66 	GF_per= 6243.89 [0m
+[0;31m Prog= 81.99%	N_left= 36864	Time= 12.18	Time_left= 2.67	iGF= 12136.41	GF= 12485.27	iGF_per= 6068.21 	GF_per= 6242.63 [0m
+[0;31m Prog= 82.55%	N_left= 36480	Time= 12.26	Time_left= 2.59	iGF= 12309.33	GF= 12484.06	iGF_per= 6154.66 	GF_per= 6242.03 [0m
+[0;31m Prog= 83.09%	N_left= 36096	Time= 12.35	Time_left= 2.51	iGF= 12134.09	GF= 12481.70	iGF_per= 6067.04 	GF_per= 6240.85 [0m
+[0;31m Prog= 83.63%	N_left= 35712	Time= 12.43	Time_left= 2.43	iGF= 12252.86	GF= 12480.21	iGF_per= 6126.43 	GF_per= 6240.11 [0m
+[0;31m Prog= 84.15%	N_left= 35328	Time= 12.51	Time_left= 2.36	iGF= 12236.56	GF= 12478.67	iGF_per= 6118.28 	GF_per= 6239.33 [0m
+[0;31m Prog= 84.66%	N_left= 34944	Time= 12.58	Time_left= 2.28	iGF= 12223.70	GF= 12477.10	iGF_per= 6111.85 	GF_per= 6238.55 [0m
+[0;31m Prog= 85.16%	N_left= 34560	Time= 12.66	Time_left= 2.21	iGF= 12201.59	GF= 12475.44	iGF_per= 6100.79 	GF_per= 6237.72 [0m
+[0;31m Prog= 85.65%	N_left= 34176	Time= 12.74	Time_left= 2.13	iGF= 12080.77	GF= 12473.12	iGF_per= 6040.39 	GF_per= 6236.56 [0m
+[0;31m Prog= 86.13%	N_left= 33792	Time= 12.81	Time_left= 2.06	iGF= 12017.17	GF= 12470.49	iGF_per= 6008.58 	GF_per= 6235.24 [0m
+[0;31m Prog= 86.60%	N_left= 33408	Time= 12.88	Time_left= 1.99	iGF= 11993.29	GF= 12467.81	iGF_per= 5996.65 	GF_per= 6233.91 [0m
+[0;31m Prog= 87.05%	N_left= 33024	Time= 12.95	Time_left= 1.93	iGF= 12292.44	GF= 12466.88	iGF_per= 6146.22 	GF_per= 6233.44 [0m
+[0;31m Prog= 87.50%	N_left= 32640	Time= 13.02	Time_left= 1.86	iGF= 12211.14	GF= 12465.55	iGF_per= 6105.57 	GF_per= 6232.77 [0m
+[0;31m Prog= 87.94%	N_left= 32256	Time= 13.09	Time_left= 1.80	iGF= 11789.99	GF= 12462.01	iGF_per= 5894.99 	GF_per= 6231.00 [0m
+[0;31m Prog= 88.36%	N_left= 31872	Time= 13.15	Time_left= 1.73	iGF= 12500.02	GF= 12462.19	iGF_per= 6250.01 	GF_per= 6231.09 [0m
+[0;31m Prog= 88.78%	N_left= 31488	Time= 13.21	Time_left= 1.67	iGF= 11876.03	GF= 12459.31	iGF_per= 5938.02 	GF_per= 6229.65 [0m
+[0;31m Prog= 89.18%	N_left= 31104	Time= 13.28	Time_left= 1.61	iGF= 11810.97	GF= 12456.20	iGF_per= 5905.48 	GF_per= 6228.10 [0m
+[0;31m Prog= 89.58%	N_left= 30720	Time= 13.34	Time_left= 1.55	iGF= 12206.56	GF= 12455.07	iGF_per= 6103.28 	GF_per= 6227.54 [0m
+[0;31m Prog= 89.96%	N_left= 30336	Time= 13.40	Time_left= 1.49	iGF= 12207.08	GF= 12453.99	iGF_per= 6103.54 	GF_per= 6226.99 [0m
+[0;31m Prog= 90.34%	N_left= 29952	Time= 13.46	Time_left= 1.44	iGF= 11890.54	GF= 12451.53	iGF_per= 5945.27 	GF_per= 6225.77 [0m
+[0;31m Prog= 90.71%	N_left= 29568	Time= 13.52	Time_left= 1.39	iGF= 10459.00	GF= 12441.95	iGF_per= 5229.50 	GF_per= 6220.97 [0m
+[0;31m Prog= 91.07%	N_left= 29184	Time= 13.58	Time_left= 1.33	iGF= 10935.30	GF= 12435.22	iGF_per= 5467.65 	GF_per= 6217.61 [0m
+[0;31m Prog= 91.41%	N_left= 28800	Time= 13.64	Time_left= 1.28	iGF= 10574.58	GF= 12426.90	iGF_per= 5287.29 	GF_per= 6213.45 [0m
+[0;31m Prog= 91.75%	N_left= 28416	Time= 13.70	Time_left= 1.23	iGF= 10946.70	GF= 12420.69	iGF_per= 5473.35 	GF_per= 6210.35 [0m
+[0;31m Prog= 92.08%	N_left= 28032	Time= 13.75	Time_left= 1.18	iGF= 11222.10	GF= 12415.94	iGF_per= 5611.05 	GF_per= 6207.97 [0m
+[0;31m Prog= 92.40%	N_left= 27648	Time= 13.81	Time_left= 1.14	iGF= 11064.29	GF= 12410.68	iGF_per= 5532.15 	GF_per= 6205.34 [0m
+[0;31m Prog= 92.72%	N_left= 27264	Time= 13.86	Time_left= 1.09	iGF= 10315.96	GF= 12402.20	iGF_per= 5157.98 	GF_per= 6201.10 [0m
+[0;31m Prog= 93.02%	N_left= 26880	Time= 13.92	Time_left= 1.04	iGF= 10208.92	GF= 12393.51	iGF_per= 5104.46 	GF_per= 6196.76 [0m
+[0;31m Prog= 93.31%	N_left= 26496	Time= 13.97	Time_left= 1.00	iGF= 10020.79	GF= 12384.24	iGF_per= 5010.39 	GF_per= 6192.12 [0m
+[0;31m Prog= 93.60%	N_left= 26112	Time= 14.03	Time_left= 0.96	iGF= 10353.93	GF= 12376.81	iGF_per= 5176.97 	GF_per= 6188.41 [0m
+[0;31m Prog= 93.88%	N_left= 25728	Time= 14.08	Time_left= 0.92	iGF=  9864.69	GF= 12367.48	iGF_per= 4932.34 	GF_per= 6183.74 [0m
+[0;31m Prog= 94.15%	N_left= 25344	Time= 14.13	Time_left= 0.88	iGF= 10004.53	GF= 12359.11	iGF_per= 5002.27 	GF_per= 6179.55 [0m
+[0;31m Prog= 94.41%	N_left= 24960	Time= 14.18	Time_left= 0.84	iGF=  9792.08	GF= 12350.12	iGF_per= 4896.04 	GF_per= 6175.06 [0m
+[0;31m Prog= 95.15%	N_left= 23808	Time= 14.33	Time_left= 0.73	iGF=  8917.99	GF= 12313.33	iGF_per= 4458.99 	GF_per= 6156.66 [0m
+[0;31m Prog= 96.03%	N_left= 22272	Time= 14.53	Time_left= 0.60	iGF=  8411.32	GF= 12261.22	iGF_per= 4205.66 	GF_per= 6130.61 [0m
+[0;31m Prog= 96.61%	N_left= 21120	Time= 14.66	Time_left= 0.51	iGF=  7777.29	GF= 12218.58	iGF_per= 3888.64 	GF_per= 6109.29 [0m
+[0;31m Prog= 97.30%	N_left= 19584	Time= 14.84	Time_left= 0.41	iGF=  7198.65	GF= 12158.76	iGF_per= 3599.32 	GF_per= 6079.38 [0m
+[0;31m Prog= 99.20%	N_left= 13056	Time= 15.50	Time_left= 0.12	iGF=  5386.77	GF= 11872.88	iGF_per= 2693.38 	GF_per= 5936.44 [0m
+[0;31m Prog= 99.90%	N_left= 6528	Time= 15.95	Time_left= 0.02	iGF=  2828.98	GF= 11612.75	iGF_per= 1414.49 	GF_per= 5806.37 [0m
+2018-05-30 17:58:22.110
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WR00L2L8       65280   384     2     1              16.36              1.133e+04 
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0040015 ...... PASSED
+================================================================================
+
+Finished      1 tests with the following results:
+              1 tests completed and passed residual checks,
+              0 tests completed and failed residual checks,
+              0 tests skipped because of illegal input values.
+--------------------------------------------------------------------------------
+
+End of Tests.
+================================================================================
+Per-Process Host Memory Estimate: 17.35 GB (MAX) 17.35 GB (MIN)
+WR00L2L8       65280   384     2     1              16.36              1.133e+04 

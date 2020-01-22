@@ -1,0 +1,254 @@
+#!/bin/bash
+#location of HPL
+HPL_DIR=`pwd`
+
+#xport PATH=/home-2/award/openmpi-1.10.2_installation_centos72_gcc485_no_cuda/bin:$PATH
+#xport LD_LIBRARY_PATH=/home-2/award/openmpi-1.10.2_installation_centos72_gcc485_no_cuda/lib:$LD_LIBRARY_PATH
+
+#odule load cuda/9.0.176
+
+export PATH=/home/award/openmpi-3.1.0_installation_no_cuda_no_ucx/bin:$PATH
+export LD_LIBRARY_PATH=/home/award/openmpi-3.1.0_installation_no_cuda_no_ucx/lib:$LD_LIBRARY_PATH
+
+
+#module load cuda/9.0.176
+#module load cuda/9.1.85
+#module load cuda/9.2.88
+module load cuda/10.0.130
+
+
+module list
+
+nvidia-smi
+
+mpirun --version
+
+
+DATETIME=`hostname`.`date +"%m%d.%H%M%S"`
+
+nvidia-smi -pm 1
+
+#sudo nvidia-smi -ac 877,1245  # base clock for PCIE P100
+sudo nvidia-smi -ac 877,1290
+#sudo nvidia-smi -ac 877,1380
+#sudo nvidia-smi -rac
+
+#est_case_list="NB1536-NB113664-172032 NB2048-NB175104-208896"
+#test_case_list="NB3072-NB175104-208896"
+#test_case_list="NB2048-NB113664-172032"
+#test_case_list="NB3072-NB113664-172032 NB4096-NB113664-172032 NB4096-NB175104-208896"
+#test_case_list="NB2560-NB112640-209920"
+test_case_list="FULL_SCAN-NB175104-208896"
+
+for TEST_CASE in $test_case_list
+
+do
+
+TEST_NAME=sl_v100x4-$TEST_CASE
+RESULT_FILE=./results/HPL-$TEST_NAME-results-$DATETIME/HPL-$TEST_NAME-results-$DATETIME-out.txt
+
+
+case ${TEST_CASE} in 
+
+FULL_SCAN)
+
+NUM_PROB_SIZE_LINE="20          # of problems sizes (N)"
+NS_LINE="113664 116736 119808 122880 125952 129024 132096 135168 138240 141312 144384 147456 150528 153600 156672 159744 162816 165888 168960 172032   Ns"
+NUM_NBS_LINE="6             # of NBs"
+NBS_LINE="128 256 384 512 768 1024           NBs"
+
+;;
+
+FULL_SCAN-NB175104-208896)
+
+NUM_PROB_SIZE_LINE="20          # of problems sizes (N)"
+#NS_LINE="113664 116736 119808 122880 125952 129024 132096 135168 138240 141312 144384 147456 150528 153600 156672 159744 162816 165888 168960 172032   Ns"
+NS_LINE="175104 178176 181248 184320 187392 190464 193536 196608 199680 202752 205824 208896   Ns"
+NUM_NBS_LINE="6             # of NBs"
+NBS_LINE="128 256 384 512 768 1024           NBs"
+
+;;
+
+NB1536-NB113664-172032)
+
+NUM_PROB_SIZE_LINE="20           # of problems sizes (N)"
+#NS_LINE="175104 178176 181248 184320 187392 190464 193536 196608 199680 202752 205824 208896   Ns"
+NS_LINE="113664 116736 119808 122880 125952 129024 132096 135168 138240 141312 144384 147456 150528 153600 156672 159744 162816 165888 168960 172032   Ns"
+NUM_NBS_LINE="1             # of NBs"
+NBS_LINE="1536         NBs"
+export ICHUNK_SIZE=1536
+
+;;
+
+NB2048-NB175104-208896)
+
+NUM_PROB_SIZE_LINE="20           # of problems sizes (N)"
+NS_LINE="175104 178176 181248 184320 187392 190464 193536 196608 199680 202752 205824 208896   Ns"
+NUM_NBS_LINE="1             # of NBs"
+NBS_LINE="2048         NBs"
+export ICHUNK_SIZE=2048
+
+;;
+
+NB2048-NB113664-172032)
+
+NUM_PROB_SIZE_LINE="12           # of problems sizes (N)"
+NS_LINE="113664 116736 119808 122880 125952 129024 132096 135168 138240 141312 144384 147456 150528 153600 156672 159744 162816 165888 168960 172032   Ns"
+NUM_NBS_LINE="1             # of NBs"
+NBS_LINE="2048         NBs"
+export ICHUNK_SIZE=2048
+
+;;
+
+
+NB2560-NB112640-209920)
+
+NUM_PROB_SIZE_LINE="20           # of problems sizes (N)"
+NS_LINE="112640 117760 122880 128000 133120 138240 143360 148480 153600 158720 163840 168960 174080 179200 184320 189440 194560 199680 204800 209920  Ns"
+NUM_NBS_LINE="1             # of NBs"
+NBS_LINE="2560         NBs"
+export ICHUNK_SIZE=2560
+export CHUNK_SIZE=2560
+
+;;
+
+
+NB3072-NB113664-172032)
+
+NUM_PROB_SIZE_LINE="20           # of problems sizes (N)"
+NS_LINE="113664 116736 119808 122880 125952 129024 132096 135168 138240 141312 144384 147456 150528 153600 156672 159744 162816 165888 168960 172032   Ns"
+NUM_NBS_LINE="1             # of NBs"
+NBS_LINE="3072         NBs"
+export ICHUNK_SIZE=3072
+export CHUNK_SIZE=3072
+
+;;
+
+
+NB3072-NB175104-208896)
+
+NUM_PROB_SIZE_LINE="12           # of problems sizes (N)"
+NS_LINE="175104 178176 181248 184320 187392 190464 193536 196608 199680 202752 205824 208896   Ns"
+#NS_LINE="113664 116736 119808 122880 125952 129024 132096 135168 138240 141312 144384 147456 150528 153600 156672 159744 162816 165888 168960 172032   Ns"
+NUM_NBS_LINE="1             # of NBs"
+NBS_LINE="3072         NBs"
+export ICHUNK_SIZE=3072
+export CHUNK_SIZE=3072
+
+;;
+
+
+NB4096-NB113664-172032)
+
+NUM_PROB_SIZE_LINE="20           # of problems sizes (N)"
+NS_LINE="113664 116736 119808 122880 125952 129024 132096 135168 138240 141312 144384 147456 150528 153600 156672 159744 162816 165888 168960 172032   Ns"
+NUM_NBS_LINE="1             # of NBs"
+NBS_LINE="4096         NBs"
+export ICHUNK_SIZE=4096
+export CHUNK_SIZE=4096
+;;
+
+
+NB4096-NB175104-208896)
+
+NUM_PROB_SIZE_LINE="12           # of problems sizes (N)"
+NS_LINE="175104 178176 181248 184320 187392 190464 193536 196608 199680 202752 205824 208896   Ns"
+#NS_LINE="113664 116736 119808 122880 125952 129024 132096 135168 138240 141312 144384 147456 150528 153600 156672 159744 162816 165888 168960 172032   Ns"
+NUM_NBS_LINE="1             # of NBs"
+NBS_LINE="4096         NBs"
+export ICHUNK_SIZE=4096
+export CHUNK_SIZE=4096
+
+;;
+
+
+
+
+esac
+
+
+mkdir ./results/HPL-$TEST_NAME-results-$DATETIME
+echo "Results in folder ./results/HPL-$TEST_NAME-results-$DATETIME"
+
+
+
+rm HPL.dat
+
+
+
+echo "HPLinpack benchmark input file" >> HPL.dat
+echo "Innovative Computing Laboratory, University of Tennessee" >> HPL.dat
+echo "HPL.out      output file name (if any)" >> HPL.dat
+echo "6            device out (6=stdout,7=stderr,file)" >> HPL.dat
+
+echo "$NUM_PROB_SIZE_LINE" >> HPL.dat
+#echo "20           # of problems sizes (N)" >> testHPL.dat
+
+echo "$NS_LINE" >> HPL.dat
+#echo "58368 61440 64512 67584 70656 73728 76800 79872 82944 86016 89088 92160 95232 98304 101376 104448 107520 110592 113664 116736  Ns" >> testHPL.dat
+
+
+echo "$NUM_NBS_LINE" >> HPL.dat
+#cho "1             # of NBs" >> HPL.dat
+
+echo "$NBS_LINE" >> HPL.dat
+#cho "128 256 384 512 768 1024 768 896 768 1024 512 384 640 768 896 960 1024 1152 1280 384 640 960 768 640 256  960 512 768 1152         NBs" >> HPL.dat
+
+
+
+echo "0            PMAP process mapping (0=Row-,1=Column-major)" >> HPL.dat
+echo "1            # of process grids (P x Q)" >> HPL.dat
+echo "2 1 2 1        Ps" >> HPL.dat
+echo "2 2 2 4        Qs" >> HPL.dat
+echo "16.0         threshold" >> HPL.dat
+echo "1            # of panel fact" >> HPL.dat
+echo "0 1 2        PFACTs (0=left, 1=Crout, 2=Right)" >> HPL.dat
+echo "1            # of recursive stopping criterium" >> HPL.dat
+echo "2 8          NBMINs (>= 1)" >> HPL.dat
+echo "1            # of panels in recursion" >> HPL.dat
+echo "2            NDIVs" >> HPL.dat
+echo "1            # of recursive panel fact." >> HPL.dat
+echo "0 1 2        RFACTs (0=left, 1=Crout, 2=Right)" >> HPL.dat
+echo "1            # of broadcast" >> HPL.dat
+echo "0 2 0 2          BCASTs (0=1rg,1=1rM,2=2rg,3=2rM,4=Lng,5=LnM)" >> HPL.dat
+echo "1            # of lookahead depth" >> HPL.dat
+echo "0            DEPTHs (>=0)" >> HPL.dat
+echo "1            SWAP (0=bin-exch,1=long,2=mix)" >> HPL.dat
+echo "192          swapping threshold" >> HPL.dat
+echo "1            L1 in (0=transposed,1=no-transposed) form" >> HPL.dat
+echo "0            U  in (0=transposed,1=no-transposed) form" >> HPL.dat
+echo "1            Equilibration (0=no,1=yes)" >> HPL.dat
+echo "8            memory alignment in double (> 0)o" >> HPL.dat
+
+
+
+#mpirun -np 4 -bind-to none  -x LD_LIBRARY_PATH ./run_linpack_GPU_hsw32_4xv100 2>&1 | tee $RESULT_FILE
+mpirun -np 4 -bind-to none  -x LD_LIBRARY_PATH ./run_linpack_GPU_sl40_4xv100_cuda10 2>&1 | tee $RESULT_FILE
+
+done
+
+for TEST_CASE in $test_case_list
+do
+
+TEST_NAME=sl_v100x4-$TEST_CASE
+#TEST_NAME=dgx1_v100x4-$TEST_CASE
+RESULT_FILE=./results/HPL-$TEST_NAME-results-$DATETIME/HPL-$TEST_NAME-results-$DATETIME-out.txt
+
+# accumulated result summary
+grep "WC\|WR" $RESULT_FILE >> ./results/result_summary.txt
+grep "WC\|WR" $RESULT_FILE
+
+
+done 
+
+
+
+
+
+
+
+
+
+
+
+
